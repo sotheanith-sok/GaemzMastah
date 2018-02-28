@@ -26,9 +26,6 @@ public class Program {
     public String getTitle(){
         return title;
     }
-    public String getPath(){
-        return path;
-    }
     @Override
     public String toString() {
         return " Title: "+title+ " Path: "+path+" Icon Path: "+iconPath;
