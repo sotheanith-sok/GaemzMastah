@@ -24,7 +24,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("view/mainView.fxml"));
-		Parent root = (Parent) loader.load();
+		Parent root = loader.load();
 		Controller controller = loader.getController();
 		Scene scene = new Scene(root, 800, 600);
 		primaryStage.setTitle("Maze Game");

@@ -6,9 +6,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<GridPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="launcher.controller.MainViewController"
             prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <fx:include fx:id="topLogo" source="/launcher/view/TopLogo.fxml" GridPane.rowIndex="0"/>
+        <fx:include fx:id="gameList" source="/launcher/view/GameList.fxml" GridPane.rowIndex="1"/>
+        <fx:include fx:id="bottomLogo" source="/launcher/view/BottomLogo.fxml" GridPane.rowIndex="2"/>
+    </children>
+    <rowConstraints>
+        <RowConstraints percentHeight="20"/>
+        <RowConstraints percentHeight="70"/>
+        <RowConstraints percentHeight="10"/>
 
-</AnchorPane>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+
+</GridPane>

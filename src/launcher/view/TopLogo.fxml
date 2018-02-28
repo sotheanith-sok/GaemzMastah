@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<BorderPane fx:id="TopLogo" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="launcher.controller.TopLogoController">
+<BorderPane fx:id="topLogo" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="launcher.controller.TopLogoController">
    <center>
       <Label contentDisplay="CENTER" text="Birdstufz" textAlignment="CENTER" textFill="#3223ff" BorderPane.alignment="CENTER">
          <font>

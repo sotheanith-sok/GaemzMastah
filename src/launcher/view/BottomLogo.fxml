@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<BorderPane fx:id="BottomLogo" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="launcher.controller.BottomLogoController">
+<BorderPane fx:id="bottomLogo" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="launcher.controller.BottomLogoController">
    <right>
       <Label text="Birdstufz" textFill="#3223ff" BorderPane.alignment="CENTER">
          <font>
