@@ -12,41 +12,41 @@ import mazeGame.model.Direction;
 
 public class Main extends Application {
 
-   public static void main(String[] args) {
-      launch(args);
-   }
+    public static void main(String[] args) {
+        launch(args);
+    }
 
-   @Override
-   public void start(Stage primaryStage) throws Exception {
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("view/mainView.fxml"));
-      Parent root = loader.load();
-      Controller controller = loader.getController();
-      Scene scene = new Scene(root, 800, 600);
-      primaryStage.setTitle("Maze Game");
-      primaryStage.setScene(scene);
-      primaryStage.show();
-      primaryStage.getScene().setOnKeyPressed(new EventHandler<KeyEvent>() {
-         @Override
-         public void handle(KeyEvent keyEvent) {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/mainView.fxml"));
+        Parent root = loader.load();
+        Controller controller = loader.getController();
+        Scene scene = new Scene(root, 800, 600);
+        primaryStage.setTitle("Maze Game");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+        primaryStage.getScene().setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
 
-            switch (keyEvent.getCode()) {
-               case UP:
-                  controller.move(Direction.North);
-                  break;
-               case DOWN:
-                  controller.move(Direction.South);
-                  break;
-               case LEFT:
-                  controller.move(Direction.West);
-                  break;
-               case RIGHT:
-                  controller.move(Direction.East);
-                  break;
-               default:
-                  break;
+                switch (keyEvent.getCode()) {
+                    case UP:
+                        controller.move(Direction.North);
+                        break;
+                    case DOWN:
+                        controller.move(Direction.South);
+                        break;
+                    case LEFT:
+                        controller.move(Direction.West);
+                        break;
+                    case RIGHT:
+                        controller.move(Direction.East);
+                        break;
+                    default:
+                        break;
+                }
             }
-         }
-      });
+        });
 
-   }
+    }
 }

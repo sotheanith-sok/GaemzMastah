@@ -3,8 +3,8 @@
 <?import javafx.scene.layout.StackPane?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
           fx:controller="mazeGame.controller.Controller">
-   <StackPane fx:id="holder">
-      <Canvas fx:id="mazeDrawable" width="${holder.prefWidth}" height="${holder.prefHeight}"/>
-      <Canvas fx:id="playerDrawable" width="${holder.prefWidth}" height="${holder.prefHeight}"/>
-   </StackPane>
+    <StackPane fx:id="holder">
+        <Canvas fx:id="mazeDrawable" width="${holder.prefWidth}" height="${holder.prefHeight}"/>
+        <Canvas fx:id="playerDrawable" width="${holder.prefWidth}" height="${holder.prefHeight}"/>
+    </StackPane>
 </GridPane>

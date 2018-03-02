@@ -9,20 +9,21 @@ import launcher.model.ProgramManager;
 
 public class Main extends Application {
 
-   public static void main(String[] args) {
-      new ProgramManager("src/launcher/resources/Database.xml").readDataFromFile();
-      launch(args);
-   }
+    public static void main(String[] args) {
+        new ProgramManager("src/launcher/resources/Database.xml").readDataFromFile();
+        launch(args);
+    }
 
-   @Override
-   public void start(Stage primaryStage) {
-      try {
-         Parent root = FXMLLoader.load(getClass().getResource("/launcher/view/MainView.fxml"));
-         Scene scene = new Scene(root);
-         primaryStage.setScene(scene);
-         primaryStage.show();
-      } catch (Exception e) {
-         e.printStackTrace();
-      }
-   }
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/launcher/view/MainView.fxml"));
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.setMaximized(true);
+            primaryStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

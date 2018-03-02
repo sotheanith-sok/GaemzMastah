@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import java.net.URL?>
-<FlowPane id="gameList" xmlns:fx="http://javafx.com/fxml/1" fx:id="gameList" alignment="CENTER" hgap="100.0" rowValignment="TOP"
-          vgap="100.0" xmlns="http://javafx.com/javafx/8"
-          fx:controller="launcher.controller.GameListController">
-   <stylesheets>
-      <URL value="@/launcher/view/styleSheets/GameList.css"/>
-   </stylesheets>
-   <children>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+            fx:controller="launcher.controller.GameListController" id="scrollPane">
+    <stylesheets>
+        <URL value="@/launcher/view/styleSheets/GameList.css"/>
+    </stylesheets>
+    <content>
+        <FlowPane id="flowPane" fx:id="gameList">
 
-   </children>
-</FlowPane>
+            <children>
+
+            </children>
+        </FlowPane>
+    </content>
+</ScrollPane>
