@@ -47,7 +47,6 @@ public class Maze {
             }
         }
         generateMaze(0, 0, column - 1, row - 1);
-        printMaze();
         initializeStartEnd();
         return maze;
     }
