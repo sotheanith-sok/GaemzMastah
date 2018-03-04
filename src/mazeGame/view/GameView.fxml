@@ -6,10 +6,10 @@
 <?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 <ScrollPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
-            fx:controller="mazeGame.controller.GameWindowController" id="scrollPanel" fx:id="scrollPanel"
+            fx:controller="mazeGame.controller.GameViewController" id="scrollPanel" fx:id="scrollPanel"
             hbarPolicy="NEVER" vbarPolicy="NEVER" pannable="true">
     <stylesheets>
-        <URL value="@/mazeGame/view/styleSheets/GameWindow.css"/>
+        <URL value="@/mazeGame/view/styleSheets/GameView.css"/>
     </stylesheets>
     <content>
         <AnchorPane id="GameWindow" fx:id="GameWindow">

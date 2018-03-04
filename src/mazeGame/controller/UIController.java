@@ -1,6 +1,6 @@
 package mazeGame.controller;
 
-public class TopUIController {
+public class UIController {
     private MainViewController mainViewController;
 
     public void setMainViewController(MainViewController mainViewController) {

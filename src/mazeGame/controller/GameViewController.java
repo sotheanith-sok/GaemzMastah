@@ -10,7 +10,7 @@ import mazeGame.model.Cell;
 import mazeGame.model.Direction;
 
 
-public class GameWindowController {
+public class GameViewController {
     private MainViewController mainViewController;
     @FXML
     private Canvas mazeDrawable, playerDrawable, fogDrawable;
@@ -21,7 +21,7 @@ public class GameWindowController {
 
     private double scale;
 
-    public GameWindowController() {
+    public GameViewController() {
         scale = 50;
     }
 
