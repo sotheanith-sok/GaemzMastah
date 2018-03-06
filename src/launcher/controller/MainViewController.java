@@ -16,7 +16,7 @@ public class MainViewController {
     ProgramManager programManager;
 
     public MainViewController() {
-        programManager = new ProgramManager("src/launcher/resources/Database.xml");
+        programManager = new ProgramManager("src/Launcher/resources/Database.xml");
     }
 
     @FXML

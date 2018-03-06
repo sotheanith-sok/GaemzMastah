@@ -7,10 +7,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import launcher.model.ProgramManager;
 
-public class launcher extends Application {
+public class Launcher extends Application {
 
     public static void main(String[] args) {
-        new ProgramManager("src/launcher/resources/Database.xml").readDataFromFile();
+        new ProgramManager("src/Launcher/resources/Database.xml").readDataFromFile();
         launch(args);
     }
 

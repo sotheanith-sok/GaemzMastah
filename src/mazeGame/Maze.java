@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import mazeGame.controller.MainViewController;
 
-public class mazeGame extends Application {
+public class Maze extends Application {
 
     public static void main(String[] args) {
 
