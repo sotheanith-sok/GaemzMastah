@@ -1,11 +1,14 @@
 package mazeGame.controller;
 
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 import mazeGame.model.Cell;
 import mazeGame.model.Direction;
 
@@ -17,12 +20,20 @@ public class GameViewController {
     @FXML
     private ScrollPane scrollPanel;
     private GraphicsContext gcMazeDrawable, gcPlayerDrawable, gcFogDrawable;
+    private Circle player;
+    private TranslateTransition translateTransition;
 
 
     private double scale;
 
     public GameViewController() {
         scale = 50;
+        player=new Circle();
+        player.setRadius(10);
+        player.setFill(Color.web("#66fcf1"));
+        translateTransition=new TranslateTransition();
+        translateTransition.setDuration(Duration.seconds(0.1));
+        translateTransition.setNode(player);
     }
 
     @FXML
@@ -44,8 +55,11 @@ public class GameViewController {
     }
 
     public void drawPlayer(Point2D point2D) {
-        gcPlayerDrawable.clearRect(0, 0, playerDrawable.getWidth(), playerDrawable.getHeight());
-        gcPlayerDrawable.fillOval((point2D.getX() + 0.35) * scale, (point2D.getY() + 0.30) * scale, 10, 10);
+        //gcPlayerDrawable.clearRect(0, 0, playerDrawable.getWidth(), playerDrawable.getHeight());
+        //gcPlayerDrawable.fillOval((point2D.getX() + 0.35) * scale, (point2D.getY() + 0.30) * scale, 10, 10);
+        translateTransition.setToX((point2D.getX() + 0.35) * scale);
+        translateTransition.setToY((point2D.getY() + 0.30) * scale);
+
         //Adjust viewbox
         double h = scrollPanel.getContent().getBoundsInLocal().getHeight();
         double y = ((point2D.getY() + 1) * scale +
