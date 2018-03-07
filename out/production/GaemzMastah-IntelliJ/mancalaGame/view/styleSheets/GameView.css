@@ -15,6 +15,9 @@
 #gameView{
     -fx-background-color: #0B0C10;
 }
+.enemySmallPot{
+    -fx-background-radius:100;
+}
 .smallPot{
     -fx-background-radius:100;
 
