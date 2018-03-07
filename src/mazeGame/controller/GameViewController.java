@@ -2,15 +2,19 @@ package mazeGame.controller;
 
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 import mazeGame.model.Cell;
 import mazeGame.model.Direction;
+
+import java.util.ArrayList;
 
 
 public class GameViewController {
@@ -21,8 +25,8 @@ public class GameViewController {
     private ScrollPane scrollPanel;
     private GraphicsContext gcMazeDrawable, gcPlayerDrawable, gcFogDrawable;
     private Circle player;
-    private TranslateTransition translateTransition;
-
+    private boolean isAnimation=false;
+    private ArrayList<TranslateTransition> translateTransitionsList;
 
     private double scale;
 
@@ -31,9 +35,7 @@ public class GameViewController {
         player=new Circle();
         player.setRadius(10);
         player.setFill(Color.web("#66fcf1"));
-        translateTransition=new TranslateTransition();
-        translateTransition.setDuration(Duration.seconds(0.1));
-        translateTransition.setNode(player);
+        translateTransitionsList=new ArrayList<TranslateTransition>();
     }
 
     @FXML
@@ -48,6 +50,10 @@ public class GameViewController {
         gcPlayerDrawable.setLineWidth(10);
         gcFogDrawable.setFill(Color.web("#0b0c10"));
         gcFogDrawable.fillRect(0, 0, fogDrawable.getWidth(), fogDrawable.getHeight());
+        System.out.println(mazeDrawable.getParent().getParent());
+        AnchorPane anchorPane=(AnchorPane)mazeDrawable.getParent();
+        anchorPane.getChildren().add(player);
+
     }
 
     public void setMainViewController(MainViewController mainViewController) {
@@ -55,25 +61,32 @@ public class GameViewController {
     }
 
     public void drawPlayer(Point2D point2D) {
-        //gcPlayerDrawable.clearRect(0, 0, playerDrawable.getWidth(), playerDrawable.getHeight());
-        //gcPlayerDrawable.fillOval((point2D.getX() + 0.35) * scale, (point2D.getY() + 0.30) * scale, 10, 10);
-        translateTransition.setToX((point2D.getX() + 0.35) * scale);
-        translateTransition.setToY((point2D.getY() + 0.30) * scale);
+        TranslateTransition translateTransition=new TranslateTransition();
+        translateTransition.setDuration(Duration.seconds(0.001));
+        translateTransition.setNode(player);
+        translateTransition.setToX((point2D.getX() + 0.7) * scale);
+        translateTransition.setToY((point2D.getY() + 0.7) * scale);
+        translateTransitionsList.add(translateTransition);
+        translateTransition.setOnFinished(e->{
+            if(translateTransitionsList.size()>0) {
 
-        //Adjust viewbox
-        double h = scrollPanel.getContent().getBoundsInLocal().getHeight();
-        double y = ((point2D.getY() + 1) * scale +
-                point2D.getY() * scale) / 2.0;
-        double v = scrollPanel.getViewportBounds().getHeight();
-        scrollPanel.setVvalue(scrollPanel.getVmax() * ((y - 0.5 * v) / (h - v)));
-        double a = scrollPanel.getContent().getBoundsInLocal().getWidth();
-        double b = ((point2D.getX() + 1) * scale +
-                point2D.getX() * scale) / 2.0;
-        double c = scrollPanel.getViewportBounds().getWidth();
-        scrollPanel.setHvalue(scrollPanel.getHmax() * ((b - 0.5 * c) / (a - c)));
+                translateTransitionsList.remove(0).play();
+
+            }else{
+                isAnimation=false;
+
+            }
+
+        });
+        if(isAnimation==false&&translateTransitionsList.size()>0){
+            isAnimation=true;
+            translateTransitionsList.remove(0).play();
+        }
+
+
 
         //Add fog of war
-
+        adjustViewBox(point2D);
         gcFogDrawable.clearRect((point2D.getX()) * scale, (point2D.getY()) * scale, 2 * scale, 1.5 * scale);
 
     }
@@ -106,6 +119,18 @@ public class GameViewController {
 
     public ScrollPane getScrollPanel() {
         return scrollPanel;
+    }
+    public void adjustViewBox(Point2D point2D){
+        double h = scrollPanel.getContent().getBoundsInLocal().getHeight();
+        double y = ((point2D.getY() + 1) * scale +
+                point2D.getY() * scale) / 2.0;
+        double v = scrollPanel.getViewportBounds().getHeight();
+        scrollPanel.setVvalue(scrollPanel.getVmax() * ((y - 0.5 * v) / (h - v)));
+        double a = scrollPanel.getContent().getBoundsInLocal().getWidth();
+        double b = ((point2D.getX() + 1) * scale +
+                point2D.getX() * scale) / 2.0;
+        double c = scrollPanel.getViewportBounds().getWidth();
+        scrollPanel.setHvalue(scrollPanel.getHmax() * ((b - 0.5 * c) / (a - c)));
     }
 
 }

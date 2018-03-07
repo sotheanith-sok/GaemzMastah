@@ -39,6 +39,7 @@ public class MainViewController {
         gameViewController.drawMap(mazeMap, new Point2D(maze.getStart().getX(), maze.getStart().getY()), new Point2D(maze.getEnd().getX(), maze.getEnd().getY()));
         gameViewController.drawPlayer(new Point2D(player.getX(), player.getY()));
 
+
     }
 
     public boolean move(Direction d) {
