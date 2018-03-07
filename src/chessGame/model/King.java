@@ -2,8 +2,8 @@ package chessGame.model;
 
 import javafx.geometry.Point2D;
 
-public class King extends ChessPieces{
-   public King(Point2D position){
+public class King extends ChessPieces {
+   public King(Point2D position) {
       super(ChessPiecesType.KING, position);
    }
 

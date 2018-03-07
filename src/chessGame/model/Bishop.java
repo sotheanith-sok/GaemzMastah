@@ -4,8 +4,8 @@ import javafx.geometry.Point2D;
 
 public class Bishop extends ChessPieces {
 
-   public Bishop(Point2D position){
-      super(ChessPiecesType.BISHOP,position);
+   public Bishop(Point2D position) {
+      super(ChessPiecesType.BISHOP, position);
    }
 
    @Override

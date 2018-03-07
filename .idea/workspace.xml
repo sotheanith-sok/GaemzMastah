@@ -63,25 +63,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="GameViewController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mazeGame/controller/GameViewController.java">
+      <file leaf-file-name="Maze.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mazeGame/Maze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+            <state relative-caret-position="595">
+              <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4753#4754#0" expanded="true" />
-                <element signature="e#4787#4788#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameView.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mazeGame/view/GameView.fxml">
+      <file leaf-file-name="Mancala.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mancalaGame/Mancala.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+            <state relative-caret-position="588">
+              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/MainView.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -90,12 +98,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainViewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mazeGame/controller/MainViewController.java">
+      <file leaf-file-name="UI.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/UI.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mancalaGame/controller/UIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EndgameScreen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mancalaGame/controller/EndgameScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,9 +139,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -137,13 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/launcher/controller/MainViewController.java" />
-        <option value="$PROJECT_DIR$/src/launcher/view/MainView.fxml" />
-        <option value="$PROJECT_DIR$/src/launcher/view/GameList.fxml" />
-        <option value="$PROJECT_DIR$/src/launcher/view/BottomLogo.fxml" />
-        <option value="$PROJECT_DIR$/src/launcher/view/styleSheets/BottomLogo.css" />
-        <option value="$PROJECT_DIR$/src/launcher/view/styleSheets/TopLogo.css" />
-        <option value="$PROJECT_DIR$/src/launcher/view/TopLogo.fxml" />
         <option value="$PROJECT_DIR$/src/mazeGame/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/mazeGame/Main.java" />
         <option value="$PROJECT_DIR$/src/mazeGame/controller/mazeGame.java" />
@@ -161,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/mazeGame/view/MainView.fxml" />
         <option value="$PROJECT_DIR$/src/mancalaGame/view/styleSheets/MainView.css" />
         <option value="$PROJECT_DIR$/src/mancalaGame/view/GameView.fxml" />
-        <option value="$PROJECT_DIR$/src/mancalaGame/Mancala.java" />
         <option value="$PROJECT_DIR$/src/mancalaGame/model/Pot.java" />
         <option value="$PROJECT_DIR$/src/mancalaGame/view/UI.fxml" />
         <option value="$PROJECT_DIR$/src/mancalaGame/view/MainView.fxml" />
@@ -169,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/mancalaGame/model/Marble.java" />
         <option value="$PROJECT_DIR$/src/mancalaGame/controller/GameViewController.java" />
         <option value="$PROJECT_DIR$/src/mancalaGame/controller/MainViewController.java" />
-        <option value="$PROJECT_DIR$/src/launcher/Launcher.java" />
         <option value="$PROJECT_DIR$/src/chessGame/model/ChessPiecesType.java" />
         <option value="$PROJECT_DIR$/src/chessGame/model/ChessPieces.java" />
         <option value="$PROJECT_DIR$/src/chessGame/model/Bishop.java" />
@@ -185,9 +209,18 @@
         <option value="$PROJECT_DIR$/src/chessGame/view/styleSheets/GameView.css" />
         <option value="$PROJECT_DIR$/src/chessGame/view/styleSheets/MainView.css" />
         <option value="$PROJECT_DIR$/src/chessGame/view/styleSheets/UI.css" />
-        <option value="$PROJECT_DIR$/src/mazeGame/view/GameView.fxml" />
         <option value="$PROJECT_DIR$/src/mazeGame/controller/MainViewController.java" />
         <option value="$PROJECT_DIR$/src/mazeGame/controller/GameViewController.java" />
+        <option value="$PROJECT_DIR$/src/launcher/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/launcher/model/Program.java" />
+        <option value="$PROJECT_DIR$/src/launcher/controller/GameListController.java" />
+        <option value="$PROJECT_DIR$/src/launcher/resources/Database.xml" />
+        <option value="$PROJECT_DIR$/src/launcher/view/styleSheets/GameList.css" />
+        <option value="$PROJECT_DIR$/src/mazeGame/view/GameView.fxml" />
+        <option value="$PROJECT_DIR$/src/mazeGame/Maze.java" />
+        <option value="$PROJECT_DIR$/src/mancalaGame/view/EndgameScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/mancalaGame/Mancala.java" />
+        <option value="$PROJECT_DIR$/src/mancalaGame/controller/EndgameScreen.java" />
       </list>
     </option>
   </component>
@@ -198,8 +231,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1120" />
+    <option name="y" value="57" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -256,20 +290,20 @@
               <item name="GaemzMastah-IntelliJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="GaemzMastah-IntelliJ" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mazeGame" type="462c0819:PsiDirectoryNode" />
+              <item name="mancalaGame" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GaemzMastah-IntelliJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="GaemzMastah-IntelliJ" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mazeGame" type="462c0819:PsiDirectoryNode" />
+              <item name="mancalaGame" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GaemzMastah-IntelliJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="GaemzMastah-IntelliJ" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mazeGame" type="462c0819:PsiDirectoryNode" />
+              <item name="mancalaGame" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -303,9 +337,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="XML" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -333,7 +367,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Maze">
+  <component name="RunManager" selected="Application.Launcher">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="HTML_USED" value="false" />
@@ -553,8 +587,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Maze" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Launcher" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Launcher" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Maze" />
         <item index="2" class="java.lang.String" itemvalue="Application.Mancala" />
         <item index="3" class="java.lang.String" itemvalue="Application.GaemzMastah" />
       </list>
@@ -603,20 +637,22 @@
       <workItem from="1520384111718" duration="1134000" />
       <workItem from="1520441952484" duration="599000" />
       <workItem from="1520445798523" duration="4104000" />
-      <workItem from="1520449964698" duration="668000" />
+      <workItem from="1520449964698" duration="3107000" />
+      <workItem from="1520455053321" duration="8584000" />
+      <workItem from="1520463709764" duration="1858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144507000" />
+    <option name="totallyTimeSpent" value="157388000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -703,7 +739,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -712,91 +748,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/launcher/view/MainView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/launcher/view/styleSheets/GameList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/launcher/view/styleSheets/MainView.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/controller/UIController.java" />
-    <entry file="file://$PROJECT_DIR$/src/mancalaGame/Mancala.java" />
-    <entry file="jar://D:/Java/src.zip!/java/util/ArrayList.java" />
-    <entry file="file://$PROJECT_DIR$/src/mancalaGame/controller/UIController.java" />
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/view/styleSheets/MainView.css" />
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/view/styleSheets/UI.css" />
-    <entry file="file://$PROJECT_DIR$/src/launcher/controller/GameListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/javafx-src.zip!/javafx/event/EventHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/mancalaGame/model/Pot.java" />
-    <entry file="jar://D:/Java/src.zip!/java/io/PrintStream.java" />
-    <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/styleSheets/UI.css" />
-    <entry file="file://$PROJECT_DIR$/src/chessGame/resources/chessPieces/B_Knight.png" />
-    <entry file="file://$PROJECT_DIR$/src/chessGame/resources/chessPieces/B_Bishop.png" />
-    <entry file="file://$PROJECT_DIR$/src/chessGame/resources/chessPieces/B_Pawn.png" />
-    <entry file="file://$PROJECT_DIR$/src/chessGame/model/ChessPiecesType.java" />
-    <entry file="file://$PROJECT_DIR$/src/chessGame/model/ChessPieces.java" />
     <entry file="file://$PROJECT_DIR$/src/chessGame/model/Bishop.java" />
     <entry file="file://$PROJECT_DIR$/src/chessGame/model/King.java" />
     <entry file="file://$PROJECT_DIR$/src/chessGame/model/Knight.java" />
     <entry file="file://$PROJECT_DIR$/src/chessGame/model/Pawn.java" />
     <entry file="file://$PROJECT_DIR$/src/chessGame/model/Queen.java" />
     <entry file="file://$PROJECT_DIR$/src/chessGame/model/Rock.java" />
-    <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/UI.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/model/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mazeGame/view/styleSheets/GameView.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/view/mainView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mazeGame/view/UI.fxml">
@@ -817,27 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/MainView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/GameView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="70" column="113" lean-forward="false" selection-start-line="70" selection-start-column="100" selection-end-line="70" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/styleSheets/GameView.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -854,13 +795,6 @@
     <entry file="file://$PROJECT_DIR$/src/chessGame/controller/MainViewController.java" />
     <entry file="file://$PROJECT_DIR$/src/chessGame/controller/GameViewController.java" />
     <entry file="file://$PROJECT_DIR$/src/chessGame/view/MainView.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/launcher/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mancalaGame/model/Marble.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -868,12 +802,206 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/Maze.java">
+    <entry file="uml://JavaScript-modules-diagram/D:/Workspace/GaemzMastah-IntelliJ">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="765.0" y="307.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mazeGame/controller/UIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/GaemzMastah-IntelliJ/launcher/Launcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/event/EventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/model/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding>
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/model/ProgramManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/resources/MazeGameIcon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/view/TopLogo.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/view/styleSheets/MainView.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/controller/GameListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/view/GameList.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/view/styleSheets/BottomLogo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/view/styleSheets/TopLogo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/resources/Database.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/view/styleSheets/GameList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mazeGame/controller/MainViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mazeGame/view/GameView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mazeGame/view/mainView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mazeGame/controller/GameViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mazeGame/model/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/EndgameScreen.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/GameView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="70" column="20" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mancalaGame/controller/GameViewController.java">
@@ -886,24 +1014,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mancalaGame/controller/MainViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
+        <state relative-caret-position="21">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/controller/MainViewController.java">
+    <entry file="file://$PROJECT_DIR$/src/mancalaGame/controller/UIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/view/GameView.fxml">
+    <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/UI.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -911,14 +1039,41 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mazeGame/controller/GameViewController.java">
+    <entry file="file://$PROJECT_DIR$/src/mancalaGame/view/MainView.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+        <state relative-caret-position="357">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mancalaGame/Mancala.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mazeGame/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4753#4754#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mancalaGame/controller/EndgameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
