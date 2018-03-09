@@ -1,6 +1,5 @@
 package mancalaGame;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,15 +9,18 @@ import mancalaGame.controller.MainViewController;
 
 public class Mancala {
    private static Mancala mancalaInstance;
-   public Mancala(){
-      if (mancalaInstance==null){
-         mancalaInstance=this;
+
+   public Mancala() {
+      System.out.println(mancalaInstance);
+      if (mancalaInstance == null) {
+         mancalaInstance = this;
          start();
       }
    }
-   public void start(){
+
+   public void start() {
       try {
-         Stage stage=new Stage();
+         Stage stage = new Stage();
          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mancalaGame/view/MainView.fxml"));
          Parent root = fxmlLoader.load();
          MainViewController mainViewController = fxmlLoader.getController();
@@ -29,7 +31,7 @@ public class Mancala {
          stage.show();
          mainViewController.start();
          stage.addEventFilter(WindowEvent.WINDOW_CLOSE_REQUEST, event -> {
-            mancalaInstance=null;
+            mancalaInstance = null;
          });
       } catch (Exception e) {
          e.printStackTrace();

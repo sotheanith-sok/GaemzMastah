@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="299.0" prefWidth="686.0"
           stylesheets="@styleSheets/EndgameScreen.css" xmlns="http://javafx.com/javafx/8"
-          fx:controller="mancalaGame.controller.EndgameScreenController">
+          fx:controller="mazeGame.controller.EndgameScreenController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0"/>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0"/>

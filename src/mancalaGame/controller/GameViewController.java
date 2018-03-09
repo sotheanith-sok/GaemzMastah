@@ -129,4 +129,6 @@ public class GameViewController implements Initializable {
    public ArrayList<Button> getPotList() {
       return potList;
    }
+
+
 }

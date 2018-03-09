@@ -19,10 +19,10 @@ import java.util.ArrayList;
 public class GameViewController {
    private MainViewController mainViewController;
    @FXML
-   private Canvas mazeDrawable, playerDrawable, fogDrawable;
+   private Canvas mazeDrawable, fogDrawable;
    @FXML
    private ScrollPane scrollPanel;
-   private GraphicsContext gcMazeDrawable, gcPlayerDrawable, gcFogDrawable;
+   private GraphicsContext gcMazeDrawable, gcFogDrawable;
    private Circle player;
    private boolean isAnimation = false;
    private ArrayList<TranslateTransition> translateTransitionsList;
@@ -40,13 +40,10 @@ public class GameViewController {
    @FXML
    public void initialize() {
       gcMazeDrawable = mazeDrawable.getGraphicsContext2D();
-      gcPlayerDrawable = playerDrawable.getGraphicsContext2D();
       gcFogDrawable = fogDrawable.getGraphicsContext2D();
       gcMazeDrawable.setStroke(Color.web("#45a29e"));
       gcMazeDrawable.setFill(Color.web("#45a29e"));
       gcMazeDrawable.setLineWidth(5);
-      gcPlayerDrawable.setFill(Color.web("#66fcf1"));
-      gcPlayerDrawable.setLineWidth(10);
       gcFogDrawable.setFill(Color.web("#0b0c10"));
       gcFogDrawable.fillRect(0, 0, fogDrawable.getWidth(), fogDrawable.getHeight());
       AnchorPane anchorPane = (AnchorPane) mazeDrawable.getParent();
@@ -89,6 +86,9 @@ public class GameViewController {
    }
 
    public void drawMap(Cell[][] mazeMap, Point2D start, Point2D end) {
+      gcFogDrawable.setFill(Color.web("#0b0c10"));
+      gcFogDrawable.fillRect(0, 0, fogDrawable.getWidth(), fogDrawable.getHeight());
+      gcMazeDrawable.clearRect(0, 0, mazeDrawable.getWidth(), mazeDrawable.getHeight());
       for (int i = 0; i < mazeMap.length; i++) {
          for (int j = 0; j < mazeMap[i].length; j++) {
             // East
@@ -129,6 +129,10 @@ public class GameViewController {
               point2D.getX() * scale) / 2.0;
       double c = scrollPanel.getViewportBounds().getWidth();
       scrollPanel.setHvalue(scrollPanel.getHmax() * ((b - 0.5 * c) / (a - c)));
+   }
+   public void clearCanvas(){
+      gcMazeDrawable.clearRect(0,0,mazeDrawable.getWidth(),mazeDrawable.getHeight());
+      gcFogDrawable.clearRect(0,0,fogDrawable.getWidth(),fogDrawable.getHeight());
    }
 
 }

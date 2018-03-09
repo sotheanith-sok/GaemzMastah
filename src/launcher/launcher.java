@@ -6,11 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import launcher.model.ProgramManager;
-import mazeGame.Maze;
 
 public class Launcher extends Application {
 
-   public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+   public static void main(String[] args) {
       new ProgramManager("src/Launcher/resources/Database.xml").readDataFromFile();
       launch(args);
 

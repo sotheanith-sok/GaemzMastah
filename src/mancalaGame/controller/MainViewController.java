@@ -1,8 +1,14 @@
 package mancalaGame.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import mancalaGame.model.Pot;
 
 import java.net.URL;
@@ -101,7 +107,9 @@ public class MainViewController implements Initializable {
             }
          }
       }
+
       resetInfo();
+      won();
    }
 
    private void resetInfo() {
@@ -110,12 +118,16 @@ public class MainViewController implements Initializable {
       }
    }
 
-   private boolean won() {
-      return potList.get(6).size() + potList.get(13).size() == 40;
+   private void won() {
+      if (potList.get(6).size() + potList.get(13).size() == 48) {
+         displayEndGameScreen();
+      }
+
    }
 
    public void gameLogic(int i) {
       if (playerCanPlay() && i >= 0) {
+
          if (playerCanPlayAgain == true) {
             playerCanPlayAgain = false;
          }
@@ -126,7 +138,6 @@ public class MainViewController implements Initializable {
 
       if (aiCanPlay() && !playerCanPlayAgain) {
          ArrayList<Button> potList = gameViewController.getPotList();
-
          while (true) {
             int k = random.nextInt(6) + 7;
             if (potList.get(k).isDisable() == false) {
@@ -153,5 +164,51 @@ public class MainViewController implements Initializable {
       return potList.get(7).size() + potList.get(8).size() + potList.get(9).size() + potList.get(10).size() + potList.get(11).size() + potList.get(12).size() > 0;
    }
 
+   public void rePlay() {
+      potList.clear();
+      for (int i = 0; i < 14; i++) {
+         potList.add(new Pot());
+      }
+      int j = 0;
+      for (int i = 0; i < potList.size(); i++) {
+         if (i != 6 && i != 13) {
+            while (potList.get(i).size() < 4) {
+               potList.get(i).add(j);
+               j++;
+            }
+         }
+      }
+      start();
+   }
+
+   public void close() {
+      Stage stage = (Stage) gameViewController.getPotList().get(0).getScene().getWindow();
+      stage.fireEvent(new WindowEvent(stage, WindowEvent.WINDOW_CLOSE_REQUEST));
+   }
+
+   public void displayEndGameScreen() {
+      try {
+         Stage stage = new Stage();
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mancalaGame/view/EndgameScreen.fxml"));
+         Parent root = fxmlLoader.load();
+         EndgameScreenController endgameScreenController = fxmlLoader.getController();
+         endgameScreenController.setMainViewController(this);
+         if (potList.get(6).size() > potList.get(13).size()) {
+            endgameScreenController.result("Won");
+         } else {
+            endgameScreenController.result("Lost");
+         }
+         Scene scene = new Scene(root);
+         stage.setScene(scene);
+         stage.setTitle("End");
+         stage.setMaximized(false);
+         stage.initOwner(gameViewController.getPotList().get(0).getScene().getWindow());
+         stage.initModality(Modality.APPLICATION_MODAL);
+         stage.show();
+
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+   }
 
 }

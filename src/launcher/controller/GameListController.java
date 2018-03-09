@@ -5,10 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.layout.FlowPane;
 import launcher.model.Program;
-import mazeGame.Maze;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class GameListController {
@@ -28,13 +26,14 @@ public class GameListController {
             Button button = new Button(p.getTitle());
             button.setStyle("-fx-background-image: url(" + p.getIconPath() + ")");
             Class myClass = Class.forName(p.getPath());
-            Constructor intConstructor= myClass.getConstructor();
+            Constructor intConstructor = myClass.getConstructor();
             button.setOnAction(event -> {
                try {
                   intConstructor.newInstance();
                } catch (Exception e) {
                   e.printStackTrace();
-               }});
+               }
+            });
             button.setContentDisplay(ContentDisplay.TOP);
             gameList.getChildren().add(button);
          }

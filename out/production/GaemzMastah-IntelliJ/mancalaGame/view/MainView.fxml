@@ -2,7 +2,8 @@
 
 
 <?import javafx.scene.layout.*?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" stylesheets="@/mancalaGame/view/styleSheets/MainView.css"
+<GridPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0"
+          stylesheets="@/mancalaGame/view/styleSheets/MainView.css"
           prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
           fx:controller="mancalaGame.controller.MainViewController">
    <columnConstraints>

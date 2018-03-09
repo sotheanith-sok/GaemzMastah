@@ -29,7 +29,8 @@ public class Program {
    public String getTitle() {
       return title;
    }
-   public String getPath(){
+
+   public String getPath() {
       return path;
    }
 
