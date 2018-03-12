@@ -1,5 +1,6 @@
 package FullChessGame;
 
+import FullChessGame.controller.MainViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -16,13 +17,15 @@ public class FullChessGame extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FullChessGame/view/GameView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FullChessGame/view/MainView.fxml"));
             Parent root = fxmlLoader.load();
+            MainViewController controller=fxmlLoader.getController();
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Chess");
             primaryStage.setMaximized(true);
             primaryStage.show();
+            controller.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
