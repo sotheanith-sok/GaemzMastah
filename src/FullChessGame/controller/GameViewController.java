@@ -32,7 +32,7 @@ public class GameViewController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         createBoard();
         createPiece();
-        move(1,0,0,2);
+
 
     }
     public void createBoard(){
@@ -50,6 +50,7 @@ public class GameViewController implements Initializable{
                 board[j][i]=rectangle;
                 rectangle.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
                     printClickedGrid(event);
+
                 });
             }
         }
@@ -57,13 +58,14 @@ public class GameViewController implements Initializable{
 
     public void printClickedGrid(MouseEvent e){
         Node node=(Node)e.getSource();
-        Integer x= GridPane.getColumnIndex(node);
-        Integer y= GridPane.getRowIndex(node);
-        System.out.println("X: "+x+" ,Y: "+y);
+        Bounds bounds=gridPane.getBoundsInLocal();
+        double x=GridPane.getColumnIndex(node);
+        double y=GridPane.getRowIndex(node);
+
+        move(1,0, (int) ((bounds.getWidth()*(x/8))), (int) (bounds.getHeight()*(y/8)));
     }
     public void createPiece(){
         Rectangle a=(Rectangle)getNodeByRowColumnIndex(0,0);
-        System.out.println(a);
         //White
         ImageView imageView;
         for (int i=0;i<8;i++){
@@ -80,26 +82,23 @@ public class GameViewController implements Initializable{
     public Node getNodeByRowColumnIndex (final int row, final int column) {
         Node result = null;
         ObservableList<Node> childrens = gridPane.getChildren();
-        System.out.println(childrens.size());
-
         for (Node node : childrens) {
             if(GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == column) {
                 result = node;
+                System.out.println(gridPane.getBoundsInParent());
                 break;
             }
         }
 
         return result;
     }
-    public void move(int x1, int y1, int x2, int y2){
+    public void move(int x1, int y1, double x2, double y2){
         System.out.println(x2+" "+y2);
         TranslateTransition translateTransition = new TranslateTransition();
         translateTransition.setDuration(Duration.seconds(0.1));
         translateTransition.setNode(pieces[x1][y1]);
-        Node r= getNodeByRowColumnIndex(x2,y2);
-        Bounds bounds = r.getBoundsInParent();
-        //Bounds screenBounds = r.localToScreen(bounds);
-        System.out.println(board[x2][y2].boundsInParentProperty());
+        translateTransition.setToX(x2);
+        translateTransition.setToY(y2);
 
         translateTransition.play();
     }
