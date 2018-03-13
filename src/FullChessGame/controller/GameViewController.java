@@ -2,7 +2,6 @@ package FullChessGame.controller;
 
 import javafx.animation.TranslateTransition;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Bounds;
@@ -16,19 +15,15 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
-import java.io.File;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.Stack;
+import java.util.*;
 
-public class GameViewController{
-    final int size=15;
+public class GameViewController implements Initializable {
+    final int size=6;
     private ImageView[][] pieces=new ImageView[size][size];
     private Rectangle[][] board=new Rectangle[size][size];
+    private boolean selected=false;
     @FXML
     private GridPane gridPane;
     private MainViewController mainViewController;
@@ -43,32 +38,24 @@ public class GameViewController{
                 }
                 rectangle.heightProperty().bind(((StackPane)gridPane.getParent()).heightProperty().divide(size));
                 rectangle.widthProperty().bind(((StackPane)gridPane.getParent()).heightProperty().divide(size));
-                board[i][j]=rectangle;
+                board[j][i]=rectangle;
                 gridPane.add(rectangle,i,j);
 
                 rectangle.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-                    printClickedGrid(event);
-                    clearEffect();
+                    clicked(event);
                 });
             }
         }
     }
     public void start(){
-        gridPane.getChildren().removeAll();
-        createBoard();
+        while(gridPane.getChildren().remove(gridPane.lookup("#Piece"))){
+
+        }
+        for( int i = 0; i < pieces.length; i++ )
+            Arrays.fill( pieces[i], null );
         createPiece();
     }
 
-    public void printClickedGrid(MouseEvent e){
-        Node node=(Node)e.getSource();
-        Bounds bounds=gridPane.getBoundsInLocal();
-        int x=GridPane.getColumnIndex(node);
-        int y=GridPane.getRowIndex(node);
-
-        move((int)(size/2),(int)(size/2),x,y);
-
-
-    }
     public void createPiece(){
         Rectangle a=board[0][0];
         //Black piece
@@ -78,10 +65,71 @@ public class GameViewController{
             imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Pawn.png"));
             imageView.fitHeightProperty().bind(a.heightProperty());
             imageView.fitWidthProperty().bind(a.widthProperty());
+            imageView.setId("Piece");
             gridPane.getChildren().add(imageView);
+            imageView.setMouseTransparent(true);
             pieces[size/2][size/2]=imageView;
             move((int)(size/2),(int)(size/2),i,1);
         }
+
+        //Rook
+
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Rook.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),0,0);
+
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Rook.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),size-1,0);
+
+        //Knight
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Knight.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),1,0);
+
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Knight.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),size-2,0);
+
+        //Bishop
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Bishop.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),2,0);
+
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Bishop.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),size-3,0);
+
 
         //White Piece
         //Pawn
@@ -89,10 +137,70 @@ public class GameViewController{
             imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Pawn.png"));
             imageView.fitHeightProperty().bind(a.heightProperty());
             imageView.fitWidthProperty().bind(a.widthProperty());
+            imageView.setId("Piece");
             gridPane.getChildren().add(imageView);
+            imageView.setMouseTransparent(true);
             pieces[size/2][size/2]=imageView;
             move((int)(size/2),(int)(size/2),i,size-2);
         }
+
+        //Rook
+
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Rook.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),0,size-1);
+
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Rook.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),size-1,size-1);
+
+        //Knight
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Knight.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),1,size-1);
+
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Knight.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),size-2,size-1);
+
+        //Bishop
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Bishop.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),2,size-1);
+
+        imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Bishop.png"));
+        imageView.fitHeightProperty().bind(a.heightProperty());
+        imageView.fitWidthProperty().bind(a.widthProperty());
+        imageView.setId("Piece");
+        gridPane.getChildren().add(imageView);
+        imageView.setMouseTransparent(true);
+        pieces[size/2][size/2]=imageView;
+        move((int)(size/2),(int)(size/2),size-3,size-1);
 
 
 
@@ -120,32 +228,35 @@ public class GameViewController{
         TranslateTransition translateTransition = new TranslateTransition();
         translateTransition.setDuration(Duration.seconds(0.1));
         translateTransition.setNode(pieces[y1][x1]);
-        Bounds bounds=board[x2][y2].getBoundsInParent();
-        System.out.println(board[x2][y2]);
-        System.out.println(board[x2][y2].getBoundsInParent());
-        translateTransition.setToX(bounds.getMinX());
-        translateTransition.setToY(bounds.getMinY());
+        Bounds bounds=board[y2][x2].getBoundsInParent();
+        translateTransition.setToX(bounds.getMinX()-board[0][0].getBoundsInParent().getMinX());
+        translateTransition.setToY(bounds.getMinY()-board[0][0].getBoundsInParent().getMinY());
         translateTransition.play();
-        /*pieces[x2][y2]=pieces[x1][y1];
-        pieces[x1][y1]=null;*/
+        if(x1!=x2 ||y1!=y2){
+            pieces[y2][x2]=pieces[y1][x1];
+            pieces[y1][x1]=null;
+        }
+
 
 
     }
-    public void displayAvaialableMove(List<Point2D> list){
+    public void displayAvailableMove(List<Point2D> list){
         for(Point2D point2D:list){
-            board[(int) point2D.getX()][(int) point2D.getY()].getStyleClass().add("blueFate");
+            board[(int) point2D.getY()][(int) point2D.getX()].getStyleClass().add("blueFate");
         }
     }
     public void displayAvailableCapture(List<Point2D> list){
         for(Point2D point2D:list){
-            board[(int) point2D.getX()][(int) point2D.getY()].getStyleClass().add("redFate");
+            board[(int) point2D.getY()][(int) point2D.getX()].getStyleClass().add("redFate");
         }
     }
     public void displaySelectedPiece(Point2D point2D){
-        board[(int) point2D.getX()][(int) point2D.getY()].getStyleClass().add("yellowFate");
+        board[(int) point2D.getY()][(int) point2D.getX()].getStyleClass().add("yellowFate");
+        mainViewController.setSelected(point2D);
     }
 
     public  void clearEffect(){
+        selected=false;
         for(int i=0; i<board.length;i++){
             for(int j=0;j<board[0].length;j++){
                 board[i][j].getStyleClass().clear();
@@ -156,5 +267,33 @@ public class GameViewController{
     public void setMainViewController(MainViewController mainViewController){
         this.mainViewController=mainViewController;
     }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        createBoard();
+    }
+    public void rePositionAllPieces(){
+        for (int i=0; i<pieces.length; i++){
+            for (int j =0 ; j<pieces[0].length;j++){
+                move(j,i,j,i);
+            }
+        }
+    }
+    public void clicked(MouseEvent mouseEvent){
+        //Clear all style
+        clearEffect();
+        //Highlight selected piece
+        Rectangle rectangle=(Rectangle)mouseEvent.getSource();
+        if(pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)]!=null){
+            selected=true;
+            displaySelectedPiece(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
+            mainViewController.displayMove(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
+        }else{
+            selected=false;
+            mainViewController.play(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
+        }
+
+    }
+
 }
 

@@ -2,19 +2,54 @@ package FullChessGame.model;
 
 import javafx.geometry.Point2D;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pawn extends GenericChessPiece {
 
     public Pawn(){
-        super(ChessPieceType.PAWN,0,0);
+        super(ChessPieceType.PAWN,0,0,0);
     }
-    public Pawn(int x, int y){
-        super(ChessPieceType.PAWN,x,y);
+    public Pawn(int x, int y, int owner){
+        super(ChessPieceType.PAWN,x,y, owner);
     }
 
     @Override
-    public boolean move(Point2D nextPosition) {
-        setCurrentPosition(nextPosition);
-        return true;
+    public List<Point2D> availableMove(int size){
+
+        ArrayList<Point2D> list=new ArrayList<>();
+        if(getOwner()==0 &&getCurrentPosition().getY()<size-2){
+            list.add(new Point2D(getCurrentPosition().getX(),getCurrentPosition().getY()+1));
+        }
+        if(getOwner()==1 &&getCurrentPosition().getY()>0){
+            list.add(new Point2D(getCurrentPosition().getX(),getCurrentPosition().getY()-1));
+        }
+        return list;
+    }
+
+    @Override
+    public List<Point2D> availableCapture(int size) {
+        ArrayList<Point2D> list=new ArrayList<>();
+        if(getOwner()==0 &&getCurrentPosition().getY()<size-2){
+            if(getCurrentPosition().getX()>0){
+                list.add(new Point2D(getCurrentPosition().getX()-1,getCurrentPosition().getY()+1));
+            }
+            if(getCurrentPosition().getX()<size-1){
+                list.add(new Point2D(getCurrentPosition().getX()+1,getCurrentPosition().getY()+1));
+            }
+
+        }
+        if(getOwner()==1 &&getCurrentPosition().getY()>0){
+            if(getCurrentPosition().getX()>0){
+                list.add(new Point2D(getCurrentPosition().getX()-1,getCurrentPosition().getY()-1));
+            }
+            if(getCurrentPosition().getX()<size-1){
+                list.add(new Point2D(getCurrentPosition().getX()+1,getCurrentPosition().getY()-1));
+            }
+        }
+
+        return list;
     }
 
     @Override

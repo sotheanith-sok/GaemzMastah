@@ -26,6 +26,9 @@ public class FullChessGame extends Application{
             primaryStage.setMaximized(true);
             primaryStage.show();
             controller.start();
+            controller.rePositionAllPieces(primaryStage);
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }

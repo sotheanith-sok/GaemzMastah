@@ -2,19 +2,17 @@ package FullChessGame.model;
 
 import javafx.geometry.Point2D;
 
+import java.util.List;
+
 public class Rook extends GenericChessPiece {
 
     public Rook(){
-        super(ChessPieceType.ROOK,0,0);
+        super(ChessPieceType.ROOK,0,0,0);
     }
-    public Rook(int x, int y){
-        super(ChessPieceType.ROOK,x,y);
+    public Rook(int x, int y, int owner){
+        super(ChessPieceType.ROOK,x,y, owner);
     }
-    @Override
-    public boolean move(Point2D nextPosition) {
-        setCurrentPosition(nextPosition);
-        return true;
-    }
+
 
     @Override
     public void capture() {
@@ -24,5 +22,15 @@ public class Rook extends GenericChessPiece {
     @Override
     public void captured() {
 
+    }
+
+    @Override
+    public List<Point2D> availableMove(int size) {
+        return null;
+    }
+
+    @Override
+    public List<Point2D> availableCapture(int size) {
+        return null;
     }
 }

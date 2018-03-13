@@ -2,20 +2,18 @@ package FullChessGame.model;
 
 import javafx.geometry.Point2D;
 
+import java.util.List;
+
 public class Knight extends GenericChessPiece {
 
     public Knight(){
-        super(ChessPieceType.KNIGHT,0,0);
+        super(ChessPieceType.KNIGHT,0,0,0);
     }
-    public Knight(int x, int y){
-        super(ChessPieceType.KNIGHT,x,y);
+    public Knight(int x, int y, int owner){
+        super(ChessPieceType.KNIGHT,x,y,owner);
     }
 
-    @Override
-    public boolean move(Point2D nextPosition) {
-        setCurrentPosition(nextPosition);
-        return true;
-    }
+
 
     @Override
     public void capture() {
@@ -25,5 +23,15 @@ public class Knight extends GenericChessPiece {
     @Override
     public void captured() {
 
+    }
+
+    @Override
+    public List<Point2D> availableMove(int size) {
+        return null;
+    }
+
+    @Override
+    public List<Point2D> availableCapture(int size) {
+        return null;
     }
 }
