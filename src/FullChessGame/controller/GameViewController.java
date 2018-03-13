@@ -23,7 +23,6 @@ public class GameViewController implements Initializable {
     final int size=6;
     private ImageView[][] pieces=new ImageView[size][size];
     private Rectangle[][] board=new Rectangle[size][size];
-    private boolean selected=false;
     @FXML
     private GridPane gridPane;
     private MainViewController mainViewController;
@@ -252,11 +251,9 @@ public class GameViewController implements Initializable {
     }
     public void displaySelectedPiece(Point2D point2D){
         board[(int) point2D.getY()][(int) point2D.getX()].getStyleClass().add("yellowFate");
-        mainViewController.setSelected(point2D);
     }
 
     public  void clearEffect(){
-        selected=false;
         for(int i=0; i<board.length;i++){
             for(int j=0;j<board[0].length;j++){
                 board[i][j].getStyleClass().clear();
@@ -284,15 +281,32 @@ public class GameViewController implements Initializable {
         clearEffect();
         //Highlight selected piece
         Rectangle rectangle=(Rectangle)mouseEvent.getSource();
-        if(pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)]!=null){
-            selected=true;
-            displaySelectedPiece(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
-            mainViewController.displayMove(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
-        }else{
-            selected=false;
-            mainViewController.play(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
+        System.out.println(mainViewController.getSelected());
+        if(mainViewController.getSelected()==null){
+            mainViewController.setSelected(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
+           displaySelectedPiece(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
+           mainViewController.displayMove(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
+        }else if(pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)]!=null){
+           mainViewController.play(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
         }
 
+    }
+    public void capture(int x1, int y1, int x2, int y2){
+       ImageView capturedPiece=pieces [y2][x2];
+       TranslateTransition translateTransition = new TranslateTransition();
+       translateTransition.setDuration(Duration.seconds(0.1));
+       translateTransition.setNode(pieces[y1][x1]);
+       Bounds bounds=board[y2][x2].getBoundsInParent();
+       translateTransition.setToX(bounds.getMinX()-board[0][0].getBoundsInParent().getMinX());
+       translateTransition.setToY(bounds.getMinY()-board[0][0].getBoundsInParent().getMinY());
+       translateTransition.play();
+       translateTransition.setOnFinished(e->{
+          gridPane.getChildren().remove(capturedPiece);
+       });
+       if(x1!=x2 ||y1!=y2){
+          pieces[y2][x2]=pieces[y1][x1];
+          pieces[y1][x1]=null;
+       }
     }
 
 }

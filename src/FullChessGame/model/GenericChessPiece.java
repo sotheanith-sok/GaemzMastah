@@ -45,4 +45,8 @@ public abstract class GenericChessPiece {
     public ChessManager getManager(){
         return manager;
     }
+
+   public ChessPieceType getType() {
+      return type;
+   }
 }

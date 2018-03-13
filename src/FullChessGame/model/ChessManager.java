@@ -9,10 +9,13 @@ import java.util.List;
 public class ChessManager {
     final int size=6;
     private GenericChessPiece[][] board ;
+    private ArrayList<ChessPieceType> player0,player1;
 
     public ChessManager(){
         board=new GenericChessPiece[size][size];
         start();
+        player0=new ArrayList<>();
+        player1=new ArrayList<>();
     }
     public void start(){
         clearBoard();
@@ -71,19 +74,32 @@ public class ChessManager {
         return board[y][x].availableCapture(size);
     }
 
-    public boolean move(int x1, int y1, int x2, int y2){
-        boolean canMove=false;
-        for(Point2D point2D:board[y1][x1].availableMove(size)){
-            if(point2D.getX()==x2&&point2D.getY()==y2){
-                canMove=true;
+    public int move(int x1, int y1, int x2, int y2){
+
+        //Capture
+        for (Point2D point2D:board[y1][x1].availableCapture(size)){
+            if(point2D.getX()==x2 &&point2D.getY()==y2){
+               if(board[y2][x2].getOwner()==0){
+                  player1.add(board[y2][x2].getType());
+               }else{
+                  player0.add(board[y2][x2].getType());
+               }
+               board[y1][x1].move(new Point2D(x2,y2));
+               board[y2][x2]=board[y1][x1];
+               board[y1][x1]=null;
+               return 2;
             }
         }
-        if(canMove){
-            board[y1][x1].move(new Point2D(x2,y2));
-            board[y2][x2]=board[y1][x1];
-            board[y1][x1]=null;
-        }
-        return canMove;
+        //Move
+       for (Point2D point2D:board[y1][x1].availableMove(size)){
+          if(point2D.getX()==x2 &&point2D.getY()==y2){
+             board[y1][x1].move(new Point2D(x2,y2));
+             board[y2][x2]=board[y1][x1];
+             board[y1][x1]=null;
+             return 1;
+          }
+       }
+        return 0;
 
     }
     private void addManagerToAllPiece(){

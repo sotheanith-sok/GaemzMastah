@@ -17,7 +17,7 @@ public class MainViewController implements Initializable {
    private Point2D selected;
     public MainViewController(){
         chessManager=new ChessManager();
-        selected=new Point2D(-1,-1);
+        selected=null;
     }
    @Override
    public void initialize(URL location, ResourceBundle resources) {
@@ -40,12 +40,15 @@ public class MainViewController implements Initializable {
 
    }
    public void play(int x,int y){
-        System.out.println("Attempt to move:("+selected.getX()+","+selected.getY()+") to ("+x+", "+y+")");
-        boolean didMove=chessManager.move((int)selected.getX(),(int)selected.getY(),x,y);
-        if(didMove){
+
+        int result=chessManager.move((int)selected.getX(),(int)selected.getY(),x,y);
+        if(result==1){
             gameViewController.move((int)selected.getX(),(int)selected.getY(),x,y);
         }
-
+        if(result==2){
+           gameViewController.capture((int)selected.getX(),(int)selected.getY(),x,y);
+        }
+        selected=null;
 
 
 
@@ -60,5 +63,8 @@ public class MainViewController implements Initializable {
    }
    public void setSelected(Point2D point2D){
         this.selected=point2D;
+   }
+   public Point2D getSelected(){
+       return selected;
    }
 }
