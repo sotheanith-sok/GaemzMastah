@@ -65,14 +65,7 @@ public class ChessManager {
         }
     }
     public List<Point2D> getAvailableMove(int x, int y){
-        List<Point2D> list= new ArrayList<>();
-        for(Point2D point2D:board[y][x].availableMove(size)){
-            if(board[(int)point2D.getY()][(int)point2D.getX()]==null){
-                list.add(point2D);
-            }
-        }
-
-        return list;
+        return board[y][x].availableMove(size);
     }
     public List<Point2D> getAvailableCapture(int x, int y){
         List<Point2D> list= new ArrayList<>();
@@ -85,7 +78,7 @@ public class ChessManager {
             }
         }
 
-        return list;
+        return board[y][x].availableCapture(size);
     }
 
     public boolean move(int x1, int y1, int x2, int y2){
@@ -111,5 +104,8 @@ public class ChessManager {
                 }
             }
         }
+    }
+    public GenericChessPiece getPieceAt(int x, int y){
+        return board[y][x];
     }
 }

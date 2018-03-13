@@ -20,10 +20,15 @@ public class Pawn extends GenericChessPiece {
 
         ArrayList<Point2D> list=new ArrayList<>();
         if(getOwner()==0 &&getCurrentPosition().getY()<size-2){
-            list.add(new Point2D(getCurrentPosition().getX(),getCurrentPosition().getY()+1));
+            if(getManager().getPieceAt((int)getCurrentPosition().getX(),(int)getCurrentPosition().getY()+1)==null){
+                list.add(new Point2D(getCurrentPosition().getX(),getCurrentPosition().getY()+1));
+            }
+
         }
         if(getOwner()==1 &&getCurrentPosition().getY()>0){
-            list.add(new Point2D(getCurrentPosition().getX(),getCurrentPosition().getY()-1));
+            if(getManager().getPieceAt((int)getCurrentPosition().getX(),(int)getCurrentPosition().getY()-1)==null){
+                list.add(new Point2D(getCurrentPosition().getX(),getCurrentPosition().getY()-1));
+            }
         }
         return list;
     }

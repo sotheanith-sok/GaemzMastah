@@ -69,8 +69,8 @@
       <file leaf-file-name="GameViewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FullChessGame/controller/GameViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1232">
-              <caret line="289" column="45" lean-forward="true" selection-start-line="289" selection-start-column="45" selection-end-line="289" selection-end-column="45" />
+            <state relative-caret-position="1400">
+              <caret line="289" column="45" lean-forward="false" selection-start-line="289" selection-start-column="45" selection-end-line="289" selection-end-column="45" />
               <folding>
                 <element signature="method#createBoard#0;class#GameViewController#0" expanded="false" />
                 <element signature="method#start#0;class#GameViewController#0" expanded="false" />
@@ -84,15 +84,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChessManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChessManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/ChessManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
-              <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+            <state relative-caret-position="259">
+              <caret line="66" column="56" lean-forward="false" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#start#0;class#ChessManager#0" expanded="false" />
                 <element signature="method#clearBoard#0;class#ChessManager#0" expanded="false" />
+                <element signature="e#1987#1988#0" expanded="true" />
+                <element signature="e#3249#3250#0" expanded="true" />
+                <element signature="e#3283#3284#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pawn.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/Pawn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="39" column="46" lean-forward="true" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,13 +200,13 @@
         <option value="$PROJECT_DIR$/src/FullChessGame/FullChessGame.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/controller/GameViewController.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/controller/MainViewController.java" />
-        <option value="$PROJECT_DIR$/src/FullChessGame/model/Pawn.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/model/Queen.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/model/Rook.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/model/Knight.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/model/King.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/model/Bishop.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/model/GenericChessPiece.java" />
+        <option value="$PROJECT_DIR$/src/FullChessGame/model/Pawn.java" />
         <option value="$PROJECT_DIR$/src/FullChessGame/model/ChessManager.java" />
       </list>
     </option>
@@ -228,35 +243,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GaemzMastah-IntelliJ" type="58d84e3e:PackageViewProjectNode" />
-              <item name="GaemzMastah-IntelliJ" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="GaemzMastah-IntelliJ" type="cbb8eebc:String" user="GaemzMastah-IntelliJ" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="GaemzMastah-IntelliJ" type="cbb8eebc:String" user="GaemzMastah-IntelliJ" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,6 +297,34 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="FullChessGame" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GaemzMastah-IntelliJ" type="58d84e3e:PackageViewProjectNode" />
+              <item name="GaemzMastah-IntelliJ" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="GaemzMastah-IntelliJ" type="cbb8eebc:String" user="GaemzMastah-IntelliJ" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="GaemzMastah-IntelliJ" type="cbb8eebc:String" user="GaemzMastah-IntelliJ" />
+              <item name="src" type="cbb8eebc:String" user="src" />
             </path>
           </expand>
           <select />
@@ -677,11 +692,12 @@
       <workItem from="1520873397442" duration="7575000" />
       <workItem from="1520882854510" duration="9569000" />
       <workItem from="1520896021594" duration="16028000" />
+      <workItem from="1520953308770" duration="906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225348000" />
+    <option name="totallyTimeSpent" value="226254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -929,7 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="53" column="44" lean-forward="false" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,7 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,7 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,16 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/Pawn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/GenericChessPiece.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -1125,8 +1127,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FullChessGame/controller/GameViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="289" column="45" lean-forward="true" selection-start-line="289" selection-start-column="45" selection-end-line="289" selection-end-column="45" />
+        <state relative-caret-position="1400">
+          <caret line="289" column="45" lean-forward="false" selection-start-line="289" selection-start-column="45" selection-end-line="289" selection-end-column="45" />
           <folding>
             <element signature="method#createBoard#0;class#GameViewController#0" expanded="false" />
             <element signature="method#start#0;class#GameViewController#0" expanded="false" />
@@ -1141,12 +1143,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/ChessManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+        <state relative-caret-position="259">
+          <caret line="66" column="56" lean-forward="false" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#start#0;class#ChessManager#0" expanded="false" />
             <element signature="method#clearBoard#0;class#ChessManager#0" expanded="false" />
+            <element signature="e#1987#1988#0" expanded="true" />
+            <element signature="e#3249#3250#0" expanded="true" />
+            <element signature="e#3283#3284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/Pawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="39" column="46" lean-forward="true" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
