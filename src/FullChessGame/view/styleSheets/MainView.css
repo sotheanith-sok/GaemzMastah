@@ -1,18 +1,20 @@
-.list-cell:empty{
+.list-cell:empty {
     -fx-opacity: 0;
     -fx-background-color: #ffffff;
 }
-.background{
+
+.background {
     -fx-background-color: #ffffff;
 }
-.list-view{
+
+.list-view {
     -fx-border-color: #ffffff;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
 
-
 }
-.list-cell{
+
+.list-cell {
     -fx-text-fill: #ffffff;
     -fx-background-color: #000000;
     -fx-border-color: #ffffff;
@@ -20,7 +22,8 @@
     -fx-alignment: center;
 
 }
-.label{
+
+.label {
     -fx-text-fill: #000000;
     -fx-font-family: "Jokerman";
     -fx-font-size: 50;
