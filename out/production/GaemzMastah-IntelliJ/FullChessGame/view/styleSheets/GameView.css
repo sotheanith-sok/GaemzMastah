@@ -1,10 +1,7 @@
 .blueFate{
-    -fx-stroke: radial-gradient(center 50% 50%,radius 100%, white 30%, #0082e6);
+    -fx-stroke: radial-gradient(center 50% 50%,radius 100%, white 30%, #000eff);
     -fx-stroke-width: 100;
     -fx-stroke-type: inside;
-}
-.kappa{
-    -fx-fill: radial-gradient(center 50% 50%,radius 100%, Transparent 1%,blue);
 }
 .redFate{
     -fx-stroke: radial-gradient(center 50% 50%,radius 100%, white 30%, #e62000);
@@ -15,4 +12,7 @@
     -fx-stroke: radial-gradient(center 50% 50%,radius 100%, white 30%, #ffff00);
     -fx-stroke-width: 100;
     -fx-stroke-type: inside;
+}
+.background{
+    -fx-background-color: #a1d6e2;
 }

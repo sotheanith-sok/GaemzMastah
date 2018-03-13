@@ -2,7 +2,6 @@ package FullChessGame.model;
 
 import javafx.geometry.Point2D;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -116,5 +115,21 @@ public class ChessManager {
     }
     public boolean isThereAPieceAt(int x, int y){
         return board[y][x]!=null;
+    }
+    public void promotion(ChessPieceType type, int x, int y){
+       switch (type){
+          case QUEEN:
+          case ROOK:
+          case BISHOP:
+          case KNIGHT:
+             default:
+       }
+    }
+    public List<ChessPieceType> getPlayer(int i){
+       if (i==0){
+          return player0;
+       }else{
+          return player1;
+       }
     }
 }

@@ -31,9 +31,9 @@ public class GameViewController implements Initializable {
             for (int j =0; j<size;j++){
                 Rectangle rectangle=new Rectangle();
                 if((i+j)%2==0){
-                    rectangle.setFill(Color.web("#ffffff"));
+                    rectangle.setFill(Color.web("#f1f1f2"));
                 }else {
-                    rectangle.setFill(Color.web("#333333"));
+                    rectangle.setFill(Color.web("#1995ad"));
                 }
                 rectangle.heightProperty().bind(((StackPane)gridPane.getParent()).heightProperty().divide(size));
                 rectangle.widthProperty().bind(((StackPane)gridPane.getParent()).heightProperty().divide(size));
@@ -47,9 +47,12 @@ public class GameViewController implements Initializable {
         }
     }
     public void start(){
-        while(gridPane.getChildren().remove(gridPane.lookup("#Piece"))){
+        while(gridPane.getChildren().remove(gridPane.lookup("#Piece0"))){
 
         }
+       while(gridPane.getChildren().remove(gridPane.lookup("#Piece1"))){
+
+       }
         for( int i = 0; i < pieces.length; i++ )
             Arrays.fill( pieces[i], null );
         createPiece();
@@ -64,7 +67,7 @@ public class GameViewController implements Initializable {
             imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Pawn.png"));
             imageView.fitHeightProperty().bind(a.heightProperty());
             imageView.fitWidthProperty().bind(a.widthProperty());
-            imageView.setId("Piece");
+            imageView.setId("Piece0");
             gridPane.getChildren().add(imageView);
             imageView.setMouseTransparent(true);
             pieces[size/2][size/2]=imageView;
@@ -76,7 +79,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Rook.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece0");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -85,7 +88,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Rook.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece0");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -95,7 +98,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Knight.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece0");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -104,7 +107,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Knight.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece0");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -114,7 +117,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Bishop.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece0");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -123,7 +126,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/B_Bishop.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece0");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -136,7 +139,7 @@ public class GameViewController implements Initializable {
             imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Pawn.png"));
             imageView.fitHeightProperty().bind(a.heightProperty());
             imageView.fitWidthProperty().bind(a.widthProperty());
-            imageView.setId("Piece");
+            imageView.setId("Piece1");
             gridPane.getChildren().add(imageView);
             imageView.setMouseTransparent(true);
             pieces[size/2][size/2]=imageView;
@@ -148,7 +151,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Rook.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece1");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -157,7 +160,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Rook.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece1");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -167,7 +170,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Knight.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece1");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -176,7 +179,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Knight.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece1");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -186,7 +189,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Bishop.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece1");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -195,7 +198,7 @@ public class GameViewController implements Initializable {
         imageView = new ImageView(new Image("FullChessGame/resources/chessPieces/W_Bishop.png"));
         imageView.fitHeightProperty().bind(a.heightProperty());
         imageView.fitWidthProperty().bind(a.widthProperty());
-        imageView.setId("Piece");
+        imageView.setId("Piece1");
         gridPane.getChildren().add(imageView);
         imageView.setMouseTransparent(true);
         pieces[size/2][size/2]=imageView;
@@ -281,14 +284,28 @@ public class GameViewController implements Initializable {
         clearEffect();
         //Highlight selected piece
         Rectangle rectangle=(Rectangle)mouseEvent.getSource();
-        System.out.println(mainViewController.getSelected());
-        if(mainViewController.getSelected()==null){
-            mainViewController.setSelected(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
-           displaySelectedPiece(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
-           mainViewController.displayMove(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
-        }else if(pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)]!=null){
-           mainViewController.play(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
-        }
+
+
+        //Update Selector
+       if(pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)]!=null){
+          if(mainViewController.getSelected()==null){
+             mainViewController.setSelected(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
+             displaySelectedPiece(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
+             mainViewController.displayMove(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
+          }else if(pieces[(int)mainViewController.getSelected().getY()][(int)mainViewController.getSelected().getX()].getId().compareTo
+                  (pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)].getId())==0){
+             mainViewController.setSelected(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
+             displaySelectedPiece(new Point2D(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle)));
+             mainViewController.displayMove(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
+          }
+       }
+         //Play
+       if(mainViewController.getSelected()!=null){
+          if(mainViewController.getSelected().getX()!=GridPane.getColumnIndex(rectangle)||mainViewController.getSelected().getY()!=GridPane.getRowIndex(rectangle)){
+             mainViewController.play(GridPane.getColumnIndex(rectangle),GridPane.getRowIndex(rectangle));
+          }
+       }
+
 
     }
     public void capture(int x1, int y1, int x2, int y2){

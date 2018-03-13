@@ -96,6 +96,7 @@ public class Rook extends GenericChessPiece {
           i++;
        }
        //East
+       i=1;
        while (getCurrentPosition().getX()+i<size){
           if(getManager().isThereAPieceAt((int)getCurrentPosition().getX()+i,(int)getCurrentPosition().getY())){
              if(getManager().getPieceAt((int)getCurrentPosition().getX()+i,(int)getCurrentPosition().getY()).getOwner()!=getOwner()){
