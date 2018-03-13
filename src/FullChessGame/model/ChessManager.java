@@ -34,13 +34,13 @@ public class ChessManager {
         }
         //Rook
         board[0][0]=new Rook(0,0,0);
-        board[0][board[0].length-1]=new Rook(0,board[0].length-1,0);
+        board[0][board[0].length-1]=new Rook(board[0].length-1,0,0);
         //Knight
-        board[0][1]=new Knight(0,1,0);
-        board[0][board[0].length-2]=new Knight(0,board[0].length-2,0);
+        board[0][1]=new Knight(1,0,0);
+        board[0][board[0].length-2]=new Knight(board[0].length-2,0,0);
         //Bishop
-        board[0][2]=new Bishop(0,2,0);
-        board[0][board[0].length-3]=new Bishop(0,board[0].length-3,0);
+        board[0][2]=new Bishop(2,0,0);
+        board[0][board[0].length-3]=new Bishop(board[0].length-3,0,0);
 
 
         //White
@@ -49,14 +49,14 @@ public class ChessManager {
             board[size-2][i]=new Pawn(i,size-2,1);
         }
         //Rook
-        board[size-1][0]=new Rook(size-1,0,0);
-        board[size-1][board[0].length-1]=new Rook(size-1,board[0].length-1,0);
+        board[size-1][0]=new Rook(0,size-1,1);
+        board[size-1][board[0].length-1]=new Rook(board[0].length-1,size-1,1);
         //Knight
-        board[size-1][1]=new Knight(size-1,1,0);
-        board[size-1][board[0].length-2]=new Knight(size-1,board[0].length-2,0);
+        board[size-1][1]=new Knight(1,size-1,1);
+        board[size-1][board[0].length-2]=new Knight(board[0].length-2,size-1,1);
         //Bishop
-        board[size-1][2]=new Bishop(size-1,2,0);
-        board[size-1][board[0].length-3]=new Bishop(size-1,board[0].length-3,0);
+        board[size-1][2]=new Bishop(2,size-1,1);
+        board[size-1][board[0].length-3]=new Bishop(board[0].length-3,size-1,1);
         addManagerToAllPiece();
     }
     private void printBoard(){
@@ -68,16 +68,6 @@ public class ChessManager {
         return board[y][x].availableMove(size);
     }
     public List<Point2D> getAvailableCapture(int x, int y){
-        List<Point2D> list= new ArrayList<>();
-        for(Point2D point2D:board[y][x].availableCapture(size)){
-            if(board[(int)point2D.getY()][(int)point2D.getX()]!=null){
-                if(board[y][x].getOwner()!=board[(int)point2D.getY()][(int)point2D.getX()].getOwner()){
-                    list.add(point2D);
-                }
-
-            }
-        }
-
         return board[y][x].availableCapture(size);
     }
 
@@ -107,5 +97,8 @@ public class ChessManager {
     }
     public GenericChessPiece getPieceAt(int x, int y){
         return board[y][x];
+    }
+    public boolean isThereAPieceAt(int x, int y){
+        return board[y][x]!=null;
     }
 }
