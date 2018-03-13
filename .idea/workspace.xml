@@ -70,10 +70,13 @@
         <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/ChessManager.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="168">
               <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding />
 =======
+=======
+>>>>>>> parent of 0e063e1... add logic
             <state relative-caret-position="2134">
               <caret line="132" column="8" lean-forward="false" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
               <folding>
@@ -97,8 +100,13 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="398">
               <caret line="74" column="10" lean-forward="false" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+=======
+            <state relative-caret-position="147">
+              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+>>>>>>> parent of 0e063e1... add logic
 =======
             <state relative-caret-position="147">
               <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
@@ -112,9 +120,12 @@
         <entry file="file://$PROJECT_DIR$/src/FullChessGame/view/styleSheets/GameView.css">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="105">
               <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
 =======
+=======
+>>>>>>> parent of 0e063e1... add logic
             <state relative-caret-position="21">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
@@ -140,6 +151,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="454">
               <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+<<<<<<< HEAD
+>>>>>>> parent of 0e063e1... add logic
+=======
 >>>>>>> parent of 0e063e1... add logic
               <folding>
                 <element signature="imports" expanded="true" />
@@ -313,6 +327,7 @@
       </pane>
       <pane id="AndroidView" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -340,6 +355,9 @@
           <select />
         </subPane>
       </pane>
+=======
+      <pane id="Scratches" />
+>>>>>>> parent of 0e063e1... add logic
 =======
       <pane id="Scratches" />
 >>>>>>> parent of 0e063e1... add logic
@@ -395,8 +413,11 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scratches" />
 =======
+=======
+>>>>>>> parent of 0e063e1... add logic
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -775,9 +796,12 @@
       <workItem from="1520956973214" duration="5447000" />
       <workItem from="1520964215510" duration="14243000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1520979637657" duration="2996000" />
       <workItem from="1520984767443" duration="434000" />
       <workItem from="1520985257332" duration="39000" />
+=======
+>>>>>>> parent of 0e063e1... add logic
 =======
 >>>>>>> parent of 0e063e1... add logic
     </task>
@@ -785,7 +809,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="249413000" />
+=======
+    <option name="totallyTimeSpent" value="245944000" />
+>>>>>>> parent of 0e063e1... add logic
 =======
     <option name="totallyTimeSpent" value="245944000" />
 >>>>>>> parent of 0e063e1... add logic
@@ -804,6 +832,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861878" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+>>>>>>> parent of 0e063e1... add logic
 =======
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
 >>>>>>> parent of 0e063e1... add logic
@@ -1162,6 +1194,7 @@
         <state relative-caret-position="433">
           <caret line="108" column="19" lean-forward="true" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -1184,12 +1217,25 @@
         <state relative-caret-position="153">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
 =======
+=======
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/Bishop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="111" column="1" lean-forward="true" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+>>>>>>> parent of 0e063e1... add logic
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/Bishop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -1207,6 +1253,10 @@
         <state relative-caret-position="147">
           <caret line="7" column="86" lean-forward="true" selection-start-line="7" selection-start-column="86" selection-end-line="7" selection-end-column="86" />
 =======
+=======
+    <entry file="file://$PROJECT_DIR$/src/FullChessGame/FullChessGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> parent of 0e063e1... add logic
         <state relative-caret-position="216">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
@@ -1220,9 +1270,12 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
 =======
+=======
+>>>>>>> parent of 0e063e1... add logic
         <state relative-caret-position="147">
           <caret line="7" column="326" lean-forward="false" selection-start-line="7" selection-start-column="326" selection-end-line="7" selection-end-column="326" />
           <folding />
@@ -1233,9 +1286,12 @@
     <entry file="file://$PROJECT_DIR$/src/FullChessGame/model/ChessManager.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="441">
           <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
 =======
+=======
+>>>>>>> parent of 0e063e1... add logic
         <state relative-caret-position="2134">
           <caret line="132" column="8" lean-forward="false" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
           <folding>
@@ -1257,9 +1313,12 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="273">
           <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
 =======
+=======
+>>>>>>> parent of 0e063e1... add logic
         <state relative-caret-position="147">
           <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
@@ -1270,8 +1329,13 @@
     <entry file="file://$PROJECT_DIR$/src/FullChessGame/controller/GameViewController.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="105">
           <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+=======
+        <state relative-caret-position="252">
+          <caret line="35" column="56" lean-forward="false" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+>>>>>>> parent of 0e063e1... add logic
 =======
         <state relative-caret-position="252">
           <caret line="35" column="56" lean-forward="false" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
@@ -1285,10 +1349,13 @@
     <entry file="file://$PROJECT_DIR$/src/FullChessGame/controller/MainViewController.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="168">
           <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
 =======
+=======
+>>>>>>> parent of 0e063e1... add logic
         <state relative-caret-position="454">
           <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
@@ -1308,9 +1375,12 @@
     <entry file="file://$PROJECT_DIR$/src/FullChessGame/view/styleSheets/GameView.css">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="398">
           <caret line="74" column="10" lean-forward="false" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
 =======
+=======
+>>>>>>> parent of 0e063e1... add logic
         <state relative-caret-position="21">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
@@ -1321,6 +1391,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+<<<<<<< HEAD
+>>>>>>> parent of 0e063e1... add logic
+=======
 >>>>>>> parent of 0e063e1... add logic
           <folding />
         </state>
