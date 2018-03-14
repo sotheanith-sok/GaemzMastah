@@ -1,30 +1,32 @@
-package launcher;
+package chessGame;
 
+import chessGame.controller.MainViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import launcher.model.ProgramManager;
 
-public class launcher extends Application {
-
+public class chessGame extends Application {
    public static void main(String[] args) {
-      new ProgramManager("src/Launcher/resources/Database.xml").readDataFromFile();
       launch(args);
-
-
    }
 
    @Override
    public void start(Stage primaryStage) {
       try {
-         Parent root = FXMLLoader.load(getClass().getResource("/launcher/view/MainView.fxml"));
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/chessGame/view/MainView.fxml"));
+         Parent root = fxmlLoader.load();
+         MainViewController controller = fxmlLoader.getController();
          Scene scene = new Scene(root);
          primaryStage.setScene(scene);
+         primaryStage.setTitle("Chess");
          primaryStage.setMaximized(true);
-         primaryStage.setTitle("Launcher");
          primaryStage.show();
+         controller.start();
+         controller.rePositionAllPieces(primaryStage);
+
+
       } catch (Exception e) {
          e.printStackTrace();
       }
