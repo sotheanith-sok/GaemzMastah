@@ -28,6 +28,7 @@ public class Rook extends GenericChessPiece {
 
    @Override
    public List<Point2D> availableMove(int size) {
+      System.out.println(getCurrentPosition());
       ArrayList<Point2D> list = new ArrayList<>();
       int i = 1;
       //North

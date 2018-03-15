@@ -19,7 +19,7 @@ public class Pawn extends GenericChessPiece {
    public List<Point2D> availableMove(int size) {
 
       ArrayList<Point2D> list = new ArrayList<>();
-      if (getOwner() == 0 && getCurrentPosition().getY() < size - 2) {
+      if (getOwner() == 0 && getCurrentPosition().getY() < size-1) {
          if (!getManager().isThereAPieceAt((int) getCurrentPosition().getX(), (int) getCurrentPosition().getY() + 1)) {
             list.add(new Point2D(getCurrentPosition().getX(), getCurrentPosition().getY() + 1));
          }
@@ -36,7 +36,7 @@ public class Pawn extends GenericChessPiece {
    @Override
    public List<Point2D> availableCapture(int size) {
       ArrayList<Point2D> list = new ArrayList<>();
-      if (getOwner() == 0 && getCurrentPosition().getY() < size - 2) {
+      if (getOwner() == 0 && getCurrentPosition().getY() < size-1) {
          if (getCurrentPosition().getX() > 0) {
             if (getManager().isThereAPieceAt((int) getCurrentPosition().getX() - 1, (int) getCurrentPosition().getY() + 1) &&
                     getManager().getPieceAt((int) getCurrentPosition().getX() - 1, (int) getCurrentPosition().getY() + 1).getOwner() != getOwner()) {
@@ -44,7 +44,7 @@ public class Pawn extends GenericChessPiece {
             }
 
          }
-         if (getCurrentPosition().getX() < size - 1) {
+         if (getCurrentPosition().getX() < size-1) {
             if (getManager().isThereAPieceAt((int) getCurrentPosition().getX() + 1, (int) getCurrentPosition().getY() + 1) &&
                     getManager().getPieceAt((int) getCurrentPosition().getX() + 1, (int) getCurrentPosition().getY() + 1).getOwner() != getOwner()) {
                list.add(new Point2D(getCurrentPosition().getX() + 1, getCurrentPosition().getY() + 1));

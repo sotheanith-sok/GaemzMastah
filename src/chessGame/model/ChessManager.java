@@ -126,24 +126,26 @@ public class ChessManager {
       return board[y][x] != null;
    }
 
-   public void promotion(ChessPieceType type, int x, int y, int owner) {
+   public void promotion(ChessPieceType type, int x, int y) {
+      GenericChessPiece genericChessPieces=board[y][x];
       switch (type) {
          case QUEEN:
-            board[y][x] = new Queen(x, y, owner);
+            board[y][x] = new Queen(x, y, genericChessPieces.getOwner());
             break;
          case ROOK:
-            board[y][x] = new Rook(x, y, owner);
+            board[y][x] = new Rook(x, y, genericChessPieces.getOwner());
             break;
          case BISHOP:
-            board[y][x] = new Bishop(x, y, owner);
+            board[y][x] = new Bishop(x, y, genericChessPieces.getOwner());
             break;
          case KNIGHT:
-            board[y][x] = new Rook(x, y, owner);
+            board[y][x] = new Knight(x, y, genericChessPieces.getOwner());
             break;
          default:
-            board[y][x] = new Queen(x, y, owner);
+            board[y][x] = new Queen(x, y, genericChessPieces.getOwner());
             break;
       }
+      board[y][x].setManager(this);
    }
 
    public List<ChessPieceType> getPlayer(int i) {
@@ -152,5 +154,9 @@ public class ChessManager {
       } else {
          return player1;
       }
+   }
+
+   public int getSize(){
+      return size;
    }
 }

@@ -2,14 +2,19 @@ package chessGame.controller;
 
 import chessGame.model.ChessManager;
 import chessGame.model.ChessPieceType;
+import chessGame.model.GenericChessPiece;
 import javafx.animation.PauseTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Point2D;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -58,12 +63,15 @@ public class MainViewController implements Initializable {
    public void play(int x, int y) {
 
       int result = chessManager.move((int) selected.getX(), (int) selected.getY(), x, y);
+      System.out.println(result);
       if (result == 1) {
          gameViewController.move((int) selected.getX(), (int) selected.getY(), x, y);
+         checkForPromotion(x, y);
       }
       if (result == 2) {
          gameViewController.capture((int) selected.getX(), (int) selected.getY(), x, y);
          updateCapture();
+         checkForPromotion(x, y);
       }
       selected = null;
 
@@ -89,11 +97,49 @@ public class MainViewController implements Initializable {
    }
 
    public void updateCapture() {
-      System.out.println(chessManager.getPlayer(0).size());
-      System.out.println(chessManager.getPlayer(1).size());
       ObservableList<ChessPieceType> player0CapturedList = FXCollections.observableArrayList(chessManager.getPlayer(0));
       p0Captured.setItems(player0CapturedList);
       ObservableList<ChessPieceType> player1CapturedList = FXCollections.observableArrayList(chessManager.getPlayer(1));
       p1Captured.setItems(player1CapturedList);
+   }
+
+   public void displayPromotion(int x, int y, int owner){
+      try{
+         Stage stage=new Stage();
+         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("/chessGame/view/Promotion.fxml"));
+         Parent parent=fxmlLoader.load();
+         PromotionController promotionController=fxmlLoader.getController();
+         promotionController.setMainViewController(this);
+         promotionController.setStyle(owner);
+         promotionController.setTarget(x,y);
+         Scene scene=new Scene(parent);
+         stage.setScene(scene);
+         stage.setTitle("Promotion");
+         stage.setMaximized(false);
+         stage.initOwner(gameViewController.getNodeByRowColumnIndex(0,0).getScene().getWindow());
+         stage.initModality(Modality.APPLICATION_MODAL);
+         stage.show();
+
+      }catch (Exception e){
+         e.printStackTrace();
+      }
+
+   }
+   public void checkForPromotion(int x, int y){
+      GenericChessPiece genericChessPiece=chessManager.getPieceAt(x,y);
+      //Black
+      if (genericChessPiece.getType()==ChessPieceType.PAWN &&genericChessPiece.getOwner()==0
+              &&genericChessPiece.getCurrentPosition().getY()==chessManager.getSize()-1){
+         displayPromotion(x,y,genericChessPiece.getOwner());
+      }
+      //White
+      if (genericChessPiece.getType()==ChessPieceType.PAWN &&genericChessPiece.getOwner()==1
+              &&genericChessPiece.getCurrentPosition().getY()==0){
+         displayPromotion(x,y,genericChessPiece.getOwner());
+      }
+   }
+   public void promotion(ChessPieceType type,int x, int y){
+      chessManager.promotion(type,x,y);
+      gameViewController.createNewPiece(type,x,y,chessManager.getPieceAt(x,y).getOwner());
    }
 }

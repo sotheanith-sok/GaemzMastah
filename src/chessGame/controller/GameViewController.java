@@ -332,21 +332,59 @@ public class GameViewController implements Initializable {
    }
 
    public void createNewPiece(ChessPieceType type, int x, int y, int owner) {
+      ImageView imageViewDeletePiece=pieces[y][x];
+      gridPane.getChildren().remove(imageViewDeletePiece);
+      ImageView imageView;
       switch (type) {
          case QUEEN:
+            if(owner==0){
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/B_Queen.png"));
+            }else{
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/W_Queen.png"));
+            }
             break;
          case ROOK:
+            if(owner==0){
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/B_Rook.png"));
+            }else{
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/W_Rook.png"));
+            }
             break;
          case BISHOP:
+            if(owner==0){
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/B_Bishop.png"));
+            }else{
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/W_Bishop.png"));
+            }
             break;
          case KNIGHT:
-
+            if(owner==0){
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/B_Knight.png"));
+            }else{
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/W_Knight.png"));
+            }
             break;
          default:
-
+            if(owner==0){
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/B_Queen.png"));
+            }else{
+               imageView = new ImageView(new Image("chessGame/resources/chessPieces/W_Queen.png"));
+            }
             break;
       }
-   }
 
+      imageView.fitHeightProperty().bind(board[0][0].heightProperty());
+      imageView.fitWidthProperty().bind(board[0][0].widthProperty());
+      if(owner==0){
+         imageView.setId("Piece0");
+      }else{
+         imageView.setId("Piece1");
+      }
+
+      gridPane.getChildren().add(imageView);
+      imageView.setMouseTransparent(true);
+      pieces[y][x] = imageView;
+      move(x, y, x, y);
+   }
 }
 
