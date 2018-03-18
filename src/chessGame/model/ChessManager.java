@@ -9,12 +9,14 @@ public class ChessManager {
    final int size = 6;
    private GenericChessPiece[][] board;
    private ArrayList<ChessPieceType> player0, player1;
+   private  int turn;
 
    public ChessManager() {
       board = new GenericChessPiece[size][size];
       start();
       player0 = new ArrayList<>();
       player1 = new ArrayList<>();
+      turn=1;
    }
 
    public void start() {
@@ -66,9 +68,15 @@ public class ChessManager {
    }
 
    private void printBoard() {
+      System.out.println("----------------------------------------------------");
       for (int i = 0; i < size; i++) {
-         System.out.println(board[4][i]);
+         for(int j=0;j<size;j++){
+            if(board[j][i]!=null)
+               System.out.println(board[j][i].getType()+" "+board[j][i].getOwner());
+         }
+
       }
+      System.out.println("----------------------------------------------------");
    }
 
    public List<Point2D> getAvailableMove(int x, int y) {
@@ -158,5 +166,45 @@ public class ChessManager {
 
    public int getSize(){
       return size;
+   }
+   public int checkWin(){
+      int k =-1;
+      //Check for white win aka search for black bishop
+      loop0:
+      for ( int i=0; i<size;i++){
+         for ( int j=0;j<size ;j++){
+            k=1;
+            if(board[j][i]!=null&&board[j][i].getType()==ChessPieceType.ROOK &&board[j][i].getOwner()==0){
+               k=-1;
+               break loop0;
+            }
+         }
+      }
+      if(k==1){
+         return k;
+      }
+      //Check for black win
+      loop1:
+      for ( int i=0; i<size;i++){
+         for ( int j=0;j<size ;j++){
+            k=0;
+            if(board[j][i]!=null&&board[j][i].getType()==ChessPieceType.ROOK &&board[j][i].getOwner()==1){
+               k=-1;
+               break loop1;
+            }
+         }
+      }
+
+      return k;
+   }
+   public void switchTurn(){
+      if (turn==0){
+         turn=1;
+      }else{
+         turn=0;
+      }
+   }
+   public int getTurn(){
+      return turn;
    }
 }

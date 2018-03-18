@@ -63,16 +63,18 @@ public class MainViewController implements Initializable {
    public void play(int x, int y) {
 
       int result = chessManager.move((int) selected.getX(), (int) selected.getY(), x, y);
-      System.out.println(result);
       if (result == 1) {
          gameViewController.move((int) selected.getX(), (int) selected.getY(), x, y);
          checkForPromotion(x, y);
+         chessManager.switchTurn();
       }
       if (result == 2) {
          gameViewController.capture((int) selected.getX(), (int) selected.getY(), x, y);
          updateCapture();
          checkForPromotion(x, y);
+         chessManager.switchTurn();
       }
+      System.out.println(chessManager.checkWin());
       selected = null;
 
 
@@ -141,5 +143,14 @@ public class MainViewController implements Initializable {
    public void promotion(ChessPieceType type,int x, int y){
       chessManager.promotion(type,x,y);
       gameViewController.createNewPiece(type,x,y,chessManager.getPieceAt(x,y).getOwner());
+   }
+   public String getTurn(){
+      int turn=chessManager.getTurn();
+      if (turn==0){
+         return "Piece0";
+      }
+      else{
+         return "Piece1";
+      }
    }
 }

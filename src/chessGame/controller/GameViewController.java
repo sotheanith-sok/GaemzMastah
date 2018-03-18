@@ -291,7 +291,7 @@ public class GameViewController implements Initializable {
 
 
       //Update Selector
-      if (pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)] != null) {
+      if (pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)] != null &&mainViewController.getTurn().compareTo(pieces[GridPane.getRowIndex(rectangle)][GridPane.getColumnIndex(rectangle)].getId())==0) {
          if (mainViewController.getSelected() == null) {
             mainViewController.setSelected(new Point2D(GridPane.getColumnIndex(rectangle), GridPane.getRowIndex(rectangle)));
             displaySelectedPiece(new Point2D(GridPane.getColumnIndex(rectangle), GridPane.getRowIndex(rectangle)));
