@@ -59,7 +59,7 @@ public class MainViewController implements Initializable {
       resetInfo();
    }
 
-   private void distribute() {
+   public void distribute() {
       for (int i = 0; i < potList.size(); i++) {
          ArrayList<Integer> pot = potList.get(i).getPot();
          for (int j = 0; j < pot.size(); j++) {

@@ -29,7 +29,7 @@ public class MainViewController {
 
    public MainViewController() {
 
-      maze = new Maze(3, 3);
+      maze = new Maze(10, 10);
       try{
          ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
          Font.loadFont(classLoader.getResource("mazeGame/resources/Sabo-Regular.otf").toExternalForm(),10);
