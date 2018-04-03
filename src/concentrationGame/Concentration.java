@@ -1,6 +1,5 @@
 package concentrationGame;
 
-import concentrationGame.controller.GameViewController;
 import concentrationGame.controller.MainViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,6 +1,7 @@
 package launcher.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.text.Font;
 import launcher.model.Program;
 import launcher.model.ProgramManager;
 
@@ -16,7 +17,16 @@ public class MainViewController {
    ProgramManager programManager;
 
    public MainViewController() {
-      programManager = new ProgramManager("src/Launcher/resources/Database.xml");
+
+      try{
+         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+         programManager = new ProgramManager("launcher/resources/Database.xml");
+         Font.loadFont(classLoader.getResource("launcher/resources/Sabo-Regular.otf").toExternalForm(),10);
+      }catch (Exception e){
+         e.printStackTrace();
+      }
+
+
    }
 
    @FXML

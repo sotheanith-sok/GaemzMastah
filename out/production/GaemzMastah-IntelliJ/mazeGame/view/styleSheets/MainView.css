@@ -1,5 +1,3 @@
-@font-face {
-    font-family: 'Sabo';
-    src: url('/mazeGame/resources/Sabo-REgular.otf')
+.root{
+    -fx-background-color: #0b0c10;
 }
-

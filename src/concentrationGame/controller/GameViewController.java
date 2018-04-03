@@ -4,7 +4,6 @@ import javafx.animation.RotateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
@@ -44,13 +43,13 @@ public class GameViewController implements Initializable {
     */
    @Override
    public void initialize(URL location, ResourceBundle resources) {
-      list=new ArrayList<>();
+      list = new ArrayList<>();
    }
 
 
    /**
-    *
     * This method is used to create cell object by passing in the path of the image and add listener to those objects so that when it is clicked, it will flip.
+    *
     * @param path The relative path to the image.
     */
    public void createCells(String path) {
@@ -95,6 +94,7 @@ public class GameViewController implements Initializable {
 
    /**
     * This method is used to create rotation transition a.k.a rotating animation.
+    *
     * @param cell is the node that need to be rotated
     * @return Animation of the rotation.
     */
@@ -120,9 +120,10 @@ public class GameViewController implements Initializable {
 
    /**
     * Set the main controller
+    *
     * @param mainViewController Main Controller.
     */
-   public void setMainViewController(MainViewController mainViewController){
-      this.mainViewController=mainViewController;
+   public void setMainViewController(MainViewController mainViewController) {
+      this.mainViewController = mainViewController;
    }
 }

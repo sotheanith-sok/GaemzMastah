@@ -28,4 +28,5 @@
     -fx-fit-to-width: true;
     -fx-pannable: true;
     -fx-background-color: #0b0c10;
+    -fx-vbar-policy: never;
 }

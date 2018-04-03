@@ -44,14 +44,20 @@ public class EndgameScreenController implements Initializable {
    }
 
    public void result(String result) {
-      Media sound;
-      if (result.compareTo("Won") == 0) {
-         resultText.setText("Victory");
-         sound = new Media(new File("./src/mancalaGame/resources/winning.mp3").toURI().toString());
-      } else {
-         resultText.setText("Defeat");
-         sound = new Media(new File("./src/mancalaGame/resources/losing.mp3").toURI().toString());
+      Media sound=null;
+      ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+      try{
+         if (result.compareTo("Won") == 0) {
+            resultText.setText("Victory");
+            sound = new Media(classLoader.getResource("mazeGame/resources/winning.mp3").toURI().toString());
+         } else {
+            resultText.setText("Defeat");
+            sound = new Media(classLoader.getResource("mazeGame/resources/losing.mp3").toURI().toString());
+         }
+      }catch (Exception e){
+         e.printStackTrace();
       }
+
 
       mediaPlayer = new MediaPlayer(sound);
       mediaPlayer.play();

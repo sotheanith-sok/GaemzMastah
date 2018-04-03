@@ -5,8 +5,7 @@
 
 .label {
     -fx-text-fill: #66fcf1;
-
-    -fx-font-family: "Sabo";
+    -fx-font-family: Sabo;
 }
 
 #gameName {

@@ -7,6 +7,7 @@ import javafx.geometry.Point2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -28,7 +29,13 @@ public class MainViewController {
 
    public MainViewController() {
 
-      maze = new Maze(50, 50);
+      maze = new Maze(3, 3);
+      try{
+         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+         Font.loadFont(classLoader.getResource("mazeGame/resources/Sabo-Regular.otf").toExternalForm(),10);
+      }catch (Exception e){
+         e.printStackTrace();
+      }
    }
 
    @FXML

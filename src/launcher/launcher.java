@@ -10,10 +10,7 @@ import launcher.model.ProgramManager;
 public class Launcher extends Application {
 
    public static void main(String[] args) {
-      new ProgramManager("src/Launcher/resources/Database.xml").readDataFromFile();
       launch(args);
-
-
    }
 
    @Override

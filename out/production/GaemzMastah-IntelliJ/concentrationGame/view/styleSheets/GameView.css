@@ -1,9 +1,10 @@
-.flowPane{
+.flowPane {
     -fx-vgap: 10px;
     -fx-hgap: 10px;
     -fx-alignment: top-center;
 
 }
-.scrollPane{
-    -fx-fit-to-width:true;
+
+.scrollPane {
+    -fx-fit-to-width: true;
 }

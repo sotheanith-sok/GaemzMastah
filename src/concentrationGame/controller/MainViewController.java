@@ -30,8 +30,8 @@ public class MainViewController implements Initializable {
    /**
     * Constructor
     */
-   public MainViewController(){
-      cellManager=new CellManager();
+   public MainViewController() {
+      cellManager = new CellManager();
    }
 
    /**
@@ -49,20 +49,21 @@ public class MainViewController implements Initializable {
 
    /**
     * Set Stage
+    *
     * @param stage
     */
-   public void setStage(Stage stage){
-      this.stage=stage;
+   public void setStage(Stage stage) {
+      this.stage = stage;
    }
 
 
    /**
     * Method to initialize the variable for the application.
     */
-   public void start(){
-    for(Cell c:cellManager.getList()){
-       gameViewController.createCells(c.getPath());
-    }
+   public void start() {
+      for (Cell c : cellManager.getList()) {
+         gameViewController.createCells(c.getPath());
+      }
    }
 
 

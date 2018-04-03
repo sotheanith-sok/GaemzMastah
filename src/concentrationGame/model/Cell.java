@@ -25,33 +25,35 @@ public class Cell {
    /**
     * Default Constructor
     */
-   public Cell(){
-      canFlip=true;
-      isFlipped=false;
-      id=-1;
-      path="concentrationGame/resources/1.png";
+   public Cell() {
+      canFlip = true;
+      isFlipped = false;
+      id = -1;
+      path = "concentrationGame/resources/1.png";
    }
 
    /**
     * Overload construction
-    * @param canFlip Can cell be flip?
+    *
+    * @param canFlip   Can cell be flip?
     * @param isFlipped Is cell flipped on its face?
-    * @param id   What is the ID of cell?
-    * @param path Relative path to cell image.
+    * @param id        What is the ID of cell?
+    * @param path      Relative path to cell image.
     */
-   public Cell(boolean canFlip, boolean isFlipped, int id, String path){
-      this.canFlip=canFlip;
-      this.isFlipped=isFlipped;
-      this.id=id;
-      this.path=path;
+   public Cell(boolean canFlip, boolean isFlipped, int id, String path) {
+      this.canFlip = canFlip;
+      this.isFlipped = isFlipped;
+      this.id = id;
+      this.path = path;
    }
 
 
    /**
     * Get image path of this cell
+    *
     * @return relative path
     */
-   public String getPath(){
+   public String getPath() {
       return path;
    }
 

@@ -7,6 +7,7 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,10 +24,12 @@ public class ProgramManager {
 
    public void readDataFromFile() {
       try {
-         File fXmlFile = new File(filePath);
+
+         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+         InputStream input = classLoader.getResourceAsStream(filePath);
          DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
          DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-         Document document = documentBuilder.parse(fXmlFile);
+         Document document = documentBuilder.parse(input);
          document.getDocumentElement().normalize();
          NodeList nodeList = document.getElementsByTagName("application");
          for (int i = 0; i < nodeList.getLength(); i++) {

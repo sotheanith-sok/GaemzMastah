@@ -20,7 +20,6 @@ public class GameListController {
 
    public void addAppsToView(ArrayList<Program> appList) {
       try {
-         System.out.println(appList.size());
          for (int i = 0; i < appList.size(); i++) {
             Program p = appList.get(i);
             Button button = new Button(p.getTitle());

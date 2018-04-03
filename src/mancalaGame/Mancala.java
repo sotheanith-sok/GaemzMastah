@@ -11,7 +11,6 @@ public class Mancala {
    private static Mancala mancalaInstance;
 
    public Mancala() {
-      System.out.println(mancalaInstance);
       if (mancalaInstance == null) {
          mancalaInstance = this;
          start();

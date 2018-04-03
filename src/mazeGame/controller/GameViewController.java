@@ -39,15 +39,15 @@ public class GameViewController {
 
    @FXML
    public void initialize() {
-      gcMazeDrawable = mazeDrawable.getGraphicsContext2D();
-      gcFogDrawable = fogDrawable.getGraphicsContext2D();
-      gcMazeDrawable.setStroke(Color.web("#45a29e"));
-      gcMazeDrawable.setFill(Color.web("#45a29e"));
-      gcMazeDrawable.setLineWidth(5);
-      gcFogDrawable.setFill(Color.web("#0b0c10"));
-      gcFogDrawable.fillRect(0, 0, fogDrawable.getWidth(), fogDrawable.getHeight());
-      AnchorPane anchorPane = (AnchorPane) mazeDrawable.getParent();
-      anchorPane.getChildren().add(player);
+         gcMazeDrawable = mazeDrawable.getGraphicsContext2D();
+         gcFogDrawable = fogDrawable.getGraphicsContext2D();
+         gcMazeDrawable.setStroke(Color.web("#45a29e"));
+         gcMazeDrawable.setFill(Color.web("#45a29e"));
+         gcMazeDrawable.setLineWidth(5);
+         AnchorPane anchorPane = (AnchorPane) mazeDrawable.getParent();
+         anchorPane.getChildren().add(player);
+
+
 
    }
 

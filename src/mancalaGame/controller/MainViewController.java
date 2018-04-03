@@ -147,7 +147,6 @@ public class MainViewController implements Initializable {
                break;
             }
          }
-         //System.out.print(aiCanPlayAgain);
          if (!playerCanPlay() || aiCanPlayAgain) {
             aiCanPlayAgain = false;
             gameLogic(-1);
