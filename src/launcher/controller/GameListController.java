@@ -24,21 +24,29 @@ public class GameListController {
             Program p = appList.get(i);
             Button button = new Button(p.getTitle());
             button.setStyle("-fx-background-image: url(" + p.getIconPath() + ")");
-            Class myClass = Class.forName(p.getPath());
-            Constructor intConstructor = myClass.getConstructor();
-            button.setOnAction(event -> {
-               try {
-                  intConstructor.newInstance();
-               } catch (Exception e) {
-                  e.printStackTrace();
-               }
-            });
+
+            try {
+                Class myClass = Class.forName(p.getPath());
+                Constructor intConstructor = myClass.getConstructor();
+                button.setOnAction(event -> {
+                    try {
+                        intConstructor.newInstance();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+            }catch (Exception e){
+                button.setOnAction(event -> {
+                    p.start();
+                });
+            }
+
+
             button.setContentDisplay(ContentDisplay.TOP);
             gameList.getChildren().add(button);
          }
       } catch (Exception e) {
          e.printStackTrace();
       }
-
    }
 }

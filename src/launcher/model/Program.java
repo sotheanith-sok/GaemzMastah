@@ -15,7 +15,8 @@ public class Program {
 
    public void start() {
       try {
-         new ProcessBuilder(path).start();
+          ProcessBuilder pb = new ProcessBuilder("java", "-jar", System.getProperty("user.dir")+"\\"+path);
+         pb.start();
       } catch (IOException ioe) {
          ioe.printStackTrace();
       }
