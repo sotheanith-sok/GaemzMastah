@@ -8,21 +8,21 @@ import javafx.stage.Stage;
 
 public class Launcher extends Application {
 
-   public static void main(String[] args) {
-      launch(args);
-   }
+    public static void main(String[] args) {
+        launch(args);
+    }
 
-   @Override
-   public void start(Stage primaryStage) {
-      try {
-         Parent root = FXMLLoader.load(getClass().getResource("/launcher/view/MainView.fxml"));
-         Scene scene = new Scene(root);
-         primaryStage.setScene(scene);
-         primaryStage.setMaximized(true);
-         primaryStage.setTitle("Launcher");
-         primaryStage.show();
-      } catch (Exception e) {
-         e.printStackTrace();
-      }
-   }
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/launcher/view/MainView.fxml"));
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.setMaximized(true);
+            primaryStage.setTitle("Launcher");
+            primaryStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

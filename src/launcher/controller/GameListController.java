@@ -10,43 +10,43 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 
 public class GameListController {
-   MainViewController parentController;
-   @FXML
-   private FlowPane gameList;
+    MainViewController parentController;
+    @FXML
+    private FlowPane gameList;
 
-   public void setMainViewController(MainViewController mainViewController) {
-      parentController = mainViewController;
-   }
+    public void setMainViewController(MainViewController mainViewController) {
+        parentController = mainViewController;
+    }
 
-   public void addAppsToView(ArrayList<Program> appList) {
-      try {
-         for (int i = 0; i < appList.size(); i++) {
-            Program p = appList.get(i);
-            Button button = new Button(p.getTitle());
-            button.setStyle("-fx-background-image: url(" + p.getIconPath() + ")");
+    public void addAppsToView(ArrayList<Program> appList) {
+        try {
+            for (int i = 0; i < appList.size(); i++) {
+                Program p = appList.get(i);
+                Button button = new Button(p.getTitle());
+                button.setStyle("-fx-background-image: url(" + p.getIconPath() + ")");
 
-            try {
-                Class myClass = Class.forName(p.getPath());
-                Constructor intConstructor = myClass.getConstructor();
-                button.setOnAction(event -> {
-                    try {
-                        intConstructor.newInstance();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
-            }catch (Exception e){
-                button.setOnAction(event -> {
-                    p.start();
-                });
+                try {
+                    Class myClass = Class.forName(p.getPath());
+                    Constructor intConstructor = myClass.getConstructor();
+                    button.setOnAction(event -> {
+                        try {
+                            intConstructor.newInstance();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    });
+                } catch (Exception e) {
+                    button.setOnAction(event -> {
+                        p.start();
+                    });
+                }
+
+
+                button.setContentDisplay(ContentDisplay.TOP);
+                gameList.getChildren().add(button);
             }
-
-
-            button.setContentDisplay(ContentDisplay.TOP);
-            gameList.getChildren().add(button);
-         }
-      } catch (Exception e) {
-         e.printStackTrace();
-      }
-   }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
