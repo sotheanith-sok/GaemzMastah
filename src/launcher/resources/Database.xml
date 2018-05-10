@@ -12,7 +12,7 @@
         <path>chessGame.Chess</path>
         <iconPath>/launcher/resources/ChessIcon.png</iconPath>
     </application>
-    <application id="Bunny Tank Maze">
+    <application id="B.T.M">
         <path>Games\BunnyTank version 1.0.jar</path>
         <iconPath>launcher/resources/bunnyTankMaze.jpg</iconPath>
     </application>

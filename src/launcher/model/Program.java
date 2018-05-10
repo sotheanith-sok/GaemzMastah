@@ -14,7 +14,6 @@ public class Program {
     }
 
     public void start() {
-        System.out.println("HI");
         try {
             ProcessBuilder pb = new ProcessBuilder("java", "-jar", System.getProperty("user.dir") + "\\" + path);
             pb.start();
