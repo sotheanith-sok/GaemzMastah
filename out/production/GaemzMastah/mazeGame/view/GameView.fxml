@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" id="scrollPanel" fx:id="scrollPanel" hbarPolicy="NEVER" pannable="true"
+            vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/8"
+            fx:controller="mazeGame.controller.GameViewController">
+    <stylesheets>
+        <URL value="@/mazeGame/view/styleSheets/GameView.css"/>
+    </stylesheets>
+    <content>
+        <AnchorPane id="GameWindow" fx:id="GameWindow">
+            <children>
+                <Canvas fx:id="mazeDrawable" height="800" width="800" AnchorPane.bottomAnchor="10"
+                        AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10"/>
+                <Canvas fx:id="fogDrawable" height="800" width="800" AnchorPane.bottomAnchor="10"
+                        AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10"/>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

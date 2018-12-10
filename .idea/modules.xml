@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GaemzMastah-IntelliJ.iml" filepath="$PROJECT_DIR$/GaemzMastah-IntelliJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GaemzMastah.iml" filepath="$PROJECT_DIR$/GaemzMastah.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,8 @@
+#GameWindow {
+    -fx-background-color: #0b0c10;
+}
+
+#scrollPanel {
+    -fx-background: #0b0c10;
+    -fx-border-color: #0b0c10;
+}

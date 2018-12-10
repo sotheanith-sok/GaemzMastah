@@ -16,5 +16,13 @@
         <path>Games\BunnyTank version 1.0.jar</path>
         <iconPath>launcher/resources/bunnyTankMaze.jpg</iconPath>
     </application>
+	<application id="Spooky Shooter">
+        <path>Games\BunnyTank version 1.0.jar</path>
+        <iconPath>launcher/resources/SS.jpg</iconPath>
+    </application>
+	<application id="Billiard Bunnies">
+        <path>Games\BunnyTank version 1.0.jar</path>
+        <iconPath>launcher/resources/BB.jpg</iconPath>
+    </application>
 
 </applications>
